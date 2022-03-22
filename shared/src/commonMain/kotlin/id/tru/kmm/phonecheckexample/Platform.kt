@@ -3,6 +3,7 @@ package id.tru.kmm.phonecheckexample
 //Shared commonMain
 expect class Platform {
     //Deprecated
+
     public final suspend fun openCheckURL(checkURL: String): Boolean
     public final fun isReachable(): Boolean
 //    public final suspend fun checkUrlWithResponseBody(checkUrl: String): org.json.JSONObject
