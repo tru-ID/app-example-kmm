@@ -1,5 +1,5 @@
 package id.tru.kmm.phonecheckexample
-
+import id.tru.sdk.TruSDK
 import android.content.Context
 
 // Shared androidMain
@@ -7,9 +7,9 @@ actual class Platform(private val context: Context)  {
 
     @Throws(Exception::class)
     public actual final suspend fun openCheckURL(checkURL: String): Boolean {
-//        TruSDK.initializeSdk(context) //Need to optimise this.
-//        val truSdk = TruSDK.getInstance()
-//        return truSdk.openCheckUrl(checkURL)
+        TruSDK.initializeSdk(context) //Need to optimise this.
+        val truSdk = TruSDK.getInstance()
+        return truSdk.openCheckUrl(checkURL)
         return true
     }
 

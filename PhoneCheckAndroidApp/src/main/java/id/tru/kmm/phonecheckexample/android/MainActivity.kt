@@ -6,6 +6,9 @@ import android.util.Log
 import android.widget.TextView
 import id.tru.kmm.phonecheckexample.KmmTruSDK
 import id.tru.kmm.phonecheckexample.Platform
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.Dispatchers
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,23 +31,23 @@ class MainActivity : AppCompatActivity() {
         tv.text = "Hello"
 
         Log.d(TAG, "Before Coroutine")
-//        CoroutineScope(Dispatchers.IO).launch {
-//            try {
-//                Log.d(TAG, "During Coroutine")
-//                val isReachable = sdk.isReachable()
-//                Log.d(TAG, "isReachable called")
-//                val isRequestOnMobileNetwork = sdk.openCheckURL("")
-//                //val traceInfo = sdk.checkWithTrace(URL("https://www.cnn.com"))
-//                launch(Dispatchers.Main) {
-//                    print("Calling results on main thread")
-//                    tv.text = "TruSDK call made"
-//                }
-//            } catch (e: Exception) {
-//                launch(Dispatchers.Main) {
-//                    Log.d(TAG, "Exception Coroutine")
-//                }
-//            }
-//        }
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                Log.d(TAG, "During Coroutine")
+                val isReachable = sdk.isReachable()
+                Log.d(TAG, "isReachable called")
+                val isRequestOnMobileNetwork = sdk.openCheckURL("")
+                //val traceInfo = sdk.checkWithTrace(URL("https://www.cnn.com"))
+                launch(Dispatchers.Main) {
+                    print("Calling results on main thread")
+                    tv.text = "TruSDK call made"
+                }
+            } catch (e: Exception) {
+                launch(Dispatchers.Main) {
+                    Log.d(TAG, "Exception Coroutine")
+                }
+            }
+        }
         Log.d(TAG, "After Coroutine")
     }
 }
