@@ -1,15 +1,22 @@
 PODS:
-  - shared (1.0)
+  - shared (1.0):
+    - tru-sdk-ios (= 0.3.1)
+  - tru-sdk-ios (0.3.1)
 
 DEPENDENCIES:
   - shared (from `../shared`)
+
+SPEC REPOS:
+  trunk:
+    - tru-sdk-ios
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
-  shared: 7b4d6aa8aa7ada5f9dae3229e2524d316cb9f063
+  shared: b0d4e82858c27c34ec1b8df5cf2570021a3c50db
+  tru-sdk-ios: 715787454ad4acf8e32e3b182ea9970a20809d7a
 
 PODFILE CHECKSUM: f05ac038990857c6a1f5282a6c5041d3d174f051
 

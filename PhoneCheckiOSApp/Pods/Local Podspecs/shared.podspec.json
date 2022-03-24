@@ -15,6 +15,11 @@
   "platforms": {
     "ios": "14.1"
   },
+  "dependencies": {
+    "tru-sdk-ios": [
+      "0.3.1"
+    ]
+  },
   "pod_target_xcconfig": {
     "KOTLIN_PROJECT_PATH": ":shared",
     "PRODUCT_MODULE_NAME": "shared"

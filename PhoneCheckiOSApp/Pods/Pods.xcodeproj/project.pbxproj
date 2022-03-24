@@ -9,62 +9,114 @@
 /* Begin PBXAggregateTarget section */
 		8777C9F6889E59EFFD631D80AEE9048B /* shared */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9FAF69EFFAE27522789F3CA719BA83DE /* Build configuration list for PBXAggregateTarget "shared" */;
+			buildConfigurationList = 3CC19E9D9A6EA0D16F38BF9B9C6FC352 /* Build configuration list for PBXAggregateTarget "shared" */;
 			buildPhases = (
-				4552119A071AC6BAB7327E6434237EC3 /* [CP-User] Build shared */,
+				B8A1173F7CFF964E78F715CAECEF2BCC /* [CP-User] Build shared */,
 			);
 			dependencies = (
+				00242D0A188E9C2B73CE247647F828E3 /* PBXTargetDependency */,
 			);
 			name = shared;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		7981B335CA0AC841D240091AF92F936E /* Pods-PhoneCheckiOSApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73A4D5CC339A44F755A3C45B9F174F6A /* Pods-PhoneCheckiOSApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5BDC8C6B147CA4C7DCCD6418413D4F0 /* Pods-PhoneCheckiOSApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E859F5EF537A6D93525F1A6918A98A8C /* Pods-PhoneCheckiOSApp-dummy.m */; };
-		F4CF4708AE4B26BE648BEB58A8E535E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		149EA0DD9BA0172D58DEFDD764085E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		170E39536C09A8C0402B05BD04610553 /* tru-sdk-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF8FB9BF4C67F3CA6B2DFCF8DFAE1C96 /* tru-sdk-ios-dummy.m */; };
+		270E7EF802034F00A5E0AAEC4B7C1B2E /* TraceCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56609B048D002F886ACF019AE5BE6440 /* TraceCollector.swift */; };
+		4512C0311F8398B2470B8BE4F3EDAEA1 /* Pods-PhoneCheckiOSApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCDEB7F5D161882F9BBDFDEB4363C13 /* Pods-PhoneCheckiOSApp-dummy.m */; };
+		4B5576DA4E50C7EB275CBC0A5DB11DDE /* TruSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CDCBC6059C82A29EE04DA5D03F556F /* TruSDK.swift */; };
+		772F33596E201A89D56FE283008517D7 /* ReachabilityDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD3319C59F82A4905C7D50A31F3076 /* ReachabilityDetails.swift */; };
+		7B5FBF9B30CA636AFA385FE9B5664216 /* CellularConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93465E2FC4F4EE226F97849E76E8CB68 /* CellularConnectionManager.swift */; };
+		82FFC7F961BF1994F6070E68F85FF906 /* tru-sdk-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A71BD577F354F4FA424086A5F1089998 /* tru-sdk-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4F3979CFDABB9D382F5A4CEFB2B66B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		FC921697B142E0E823FDA180BCC4F18F /* Pods-PhoneCheckiOSApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA09CF54983222825578F37D6A6078 /* Pods-PhoneCheckiOSApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F8DC90F1F3AAF2F755EF100E0D326E50 /* PBXContainerItemProxy */ = {
+		0313B1A609BAF5274EF878064BF0061D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8777C9F6889E59EFFD631D80AEE9048B;
 			remoteInfo = shared;
 		};
+		6B9D0E4A821F3DC1B502E20E9580C69D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DEFDA0C769328F34EB8C8F8DB6A1072;
+			remoteInfo = "tru-sdk-ios";
+		};
+		950EA4EE456E17F079B09AE6E0DADF44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DEFDA0C769328F34EB8C8F8DB6A1072;
+			remoteInfo = "tru-sdk-ios";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00C64AEA9728186D910F9104D886D954 /* Pods-PhoneCheckiOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhoneCheckiOSApp.release.xcconfig"; sourceTree = "<group>"; };
 		081B0714C689D246F9C2C048DEF32CEB /* Pods-PhoneCheckiOSApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PhoneCheckiOSApp"; path = Pods_PhoneCheckiOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C505DCB2A055C6EDE8D7581A2C8C5D7 /* Pods-PhoneCheckiOSApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhoneCheckiOSApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		224DCC882955AFB3FB67B8A40754C5B4 /* Pods-PhoneCheckiOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhoneCheckiOSApp.debug.xcconfig"; sourceTree = "<group>"; };
+		11CDCBC6059C82A29EE04DA5D03F556F /* TruSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TruSDK.swift; path = Sources/TruSDK/TruSDK.swift; sourceTree = "<group>"; };
+		19885D533072385215B5F889E78009DE /* Pods-PhoneCheckiOSApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhoneCheckiOSApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		22CA09CF54983222825578F37D6A6078 /* Pods-PhoneCheckiOSApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhoneCheckiOSApp-umbrella.h"; sourceTree = "<group>"; };
+		2F0D77CCDA6C0731277DC50A5EEC5603 /* Pods-PhoneCheckiOSApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PhoneCheckiOSApp.modulemap"; sourceTree = "<group>"; };
+		339E21088FE741888D60A004BB0657DA /* Pods-PhoneCheckiOSApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhoneCheckiOSApp-frameworks.sh"; sourceTree = "<group>"; };
 		55C2D3073305EAA08395825B4B1ECE48 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = build/cocoapods/framework/shared.framework; sourceTree = "<group>"; };
-		66D2A297AFA225C3F29F5D957CBD2010 /* Pods-PhoneCheckiOSApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PhoneCheckiOSApp.modulemap"; sourceTree = "<group>"; };
+		56609B048D002F886ACF019AE5BE6440 /* TraceCollector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TraceCollector.swift; path = Sources/TruSDK/TraceCollector.swift; sourceTree = "<group>"; };
+		56D6482F2675013566164612501FDBD7 /* Pods-PhoneCheckiOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhoneCheckiOSApp.debug.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		73A4D5CC339A44F755A3C45B9F174F6A /* Pods-PhoneCheckiOSApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhoneCheckiOSApp-umbrella.h"; sourceTree = "<group>"; };
+		93465E2FC4F4EE226F97849E76E8CB68 /* CellularConnectionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellularConnectionManager.swift; path = Sources/TruSDK/CellularConnectionManager.swift; sourceTree = "<group>"; };
 		93EE3D31341E8C052AA1A6B10AABF3B6 /* shared.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = shared.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		976C21B0F360F2CE2A002B96E29DF40E /* tru-sdk-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "tru-sdk-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AAB1D6627D4E30E1884AF59AA6D7DB88 /* Pods-PhoneCheckiOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhoneCheckiOSApp.release.xcconfig"; sourceTree = "<group>"; };
+		A481FB9EC1FA41682497738D725FE08E /* tru-sdk-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "tru-sdk-ios.release.xcconfig"; sourceTree = "<group>"; };
+		A5CD3319C59F82A4905C7D50A31F3076 /* ReachabilityDetails.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReachabilityDetails.swift; path = Sources/TruSDK/ReachabilityDetails.swift; sourceTree = "<group>"; };
+		A71BD577F354F4FA424086A5F1089998 /* tru-sdk-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "tru-sdk-ios-umbrella.h"; sourceTree = "<group>"; };
+		AB30C5BE7050719E256B0ADD57B4DE38 /* tru-sdk-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "tru-sdk-ios-prefix.pch"; sourceTree = "<group>"; };
+		B3A7FDD93F07CDAE07AEB5E7D6164181 /* tru-sdk-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "tru-sdk-ios.modulemap"; sourceTree = "<group>"; };
 		B406B8552456CBAA10C2F07842102A95 /* shared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.release.xcconfig; sourceTree = "<group>"; };
-		B5D6BFD58806DBB26DFB058DEC7DF0DC /* Pods-PhoneCheckiOSApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhoneCheckiOSApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B9BDD1CA585B3D17F0E8F500D2DC112F /* Pods-PhoneCheckiOSApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhoneCheckiOSApp-Info.plist"; sourceTree = "<group>"; };
-		E859F5EF537A6D93525F1A6918A98A8C /* Pods-PhoneCheckiOSApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhoneCheckiOSApp-dummy.m"; sourceTree = "<group>"; };
+		CBA001A9A1597EA694285AEB04B97C1B /* Pods-PhoneCheckiOSApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhoneCheckiOSApp-Info.plist"; sourceTree = "<group>"; };
+		D31DE14F4910B5E9AFBE8094FF79C68D /* tru-sdk-ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "tru-sdk-ios"; path = tru_sdk_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB7A6E705ADC646044161986B97DCEA1 /* Pods-PhoneCheckiOSApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PhoneCheckiOSApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EDCDEB7F5D161882F9BBDFDEB4363C13 /* Pods-PhoneCheckiOSApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PhoneCheckiOSApp-dummy.m"; sourceTree = "<group>"; };
+		FE387C0D28D819F632B238338355F637 /* tru-sdk-ios-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "tru-sdk-ios-Info.plist"; sourceTree = "<group>"; };
 		FF5348F967A88EFC241009D3287F605D /* shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.debug.xcconfig; sourceTree = "<group>"; };
+		FF8FB9BF4C67F3CA6B2DFCF8DFAE1C96 /* tru-sdk-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "tru-sdk-ios-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6F2ED7E1B4496DE4FA7F26E06EA6285D /* Frameworks */ = {
+		1EA68CF9EDB24001988495556A54CC9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4CF4708AE4B26BE648BEB58A8E535E4 /* Foundation.framework in Frameworks */,
+				149EA0DD9BA0172D58DEFDD764085E5B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0862E8F157A914C0774C803DD033DA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F3979CFDABB9D382F5A4CEFB2B66B2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B47B403411C1997510ADF51CB5BFA96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				081B0714C689D246F9C2C048DEF32CEB /* Pods-PhoneCheckiOSApp */,
+				D31DE14F4910B5E9AFBE8094FF79C68D /* tru-sdk-ios */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0F60ED9C7BCD7483FF2C08CCDE50ABCE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,20 +127,44 @@
 			path = "../PhoneCheckiOSApp/Pods/Target Support Files/shared";
 			sourceTree = "<group>";
 		};
-		2A5B10F42EC7D024B7FE9F2817308D97 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				081B0714C689D246F9C2C048DEF32CEB /* Pods-PhoneCheckiOSApp */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		313FE5FE915A4A924C55AAC02A910D61 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
 				61E52D7C50139658F348CCE06AF1892B /* shared */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		38C4E8A0652595D3FBDC689380F1B37D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3A7FDD93F07CDAE07AEB5E7D6164181 /* tru-sdk-ios.modulemap */,
+				FF8FB9BF4C67F3CA6B2DFCF8DFAE1C96 /* tru-sdk-ios-dummy.m */,
+				FE387C0D28D819F632B238338355F637 /* tru-sdk-ios-Info.plist */,
+				AB30C5BE7050719E256B0ADD57B4DE38 /* tru-sdk-ios-prefix.pch */,
+				A71BD577F354F4FA424086A5F1089998 /* tru-sdk-ios-umbrella.h */,
+				976C21B0F360F2CE2A002B96E29DF40E /* tru-sdk-ios.debug.xcconfig */,
+				A481FB9EC1FA41682497738D725FE08E /* tru-sdk-ios.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/tru-sdk-ios";
+			sourceTree = "<group>";
+		};
+		4829524BF6CC9014B70AEADAD6B86C74 /* Pods-PhoneCheckiOSApp */ = {
+			isa = PBXGroup;
+			children = (
+				2F0D77CCDA6C0731277DC50A5EEC5603 /* Pods-PhoneCheckiOSApp.modulemap */,
+				DB7A6E705ADC646044161986B97DCEA1 /* Pods-PhoneCheckiOSApp-acknowledgements.markdown */,
+				19885D533072385215B5F889E78009DE /* Pods-PhoneCheckiOSApp-acknowledgements.plist */,
+				EDCDEB7F5D161882F9BBDFDEB4363C13 /* Pods-PhoneCheckiOSApp-dummy.m */,
+				339E21088FE741888D60A004BB0657DA /* Pods-PhoneCheckiOSApp-frameworks.sh */,
+				CBA001A9A1597EA694285AEB04B97C1B /* Pods-PhoneCheckiOSApp-Info.plist */,
+				22CA09CF54983222825578F37D6A6078 /* Pods-PhoneCheckiOSApp-umbrella.h */,
+				56D6482F2675013566164612501FDBD7 /* Pods-PhoneCheckiOSApp.debug.xcconfig */,
+				00C64AEA9728186D910F9104D886D954 /* Pods-PhoneCheckiOSApp.release.xcconfig */,
+			);
+			name = "Pods-PhoneCheckiOSApp";
+			path = "Target Support Files/Pods-PhoneCheckiOSApp";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -110,6 +186,19 @@
 			path = ../../shared;
 			sourceTree = "<group>";
 		};
+		91E4A822E3741D2377F15E4DAEFE64B5 /* tru-sdk-ios */ = {
+			isa = PBXGroup;
+			children = (
+				93465E2FC4F4EE226F97849E76E8CB68 /* CellularConnectionManager.swift */,
+				A5CD3319C59F82A4905C7D50A31F3076 /* ReachabilityDetails.swift */,
+				56609B048D002F886ACF019AE5BE6440 /* TraceCollector.swift */,
+				11CDCBC6059C82A29EE04DA5D03F556F /* TruSDK.swift */,
+				38C4E8A0652595D3FBDC689380F1B37D /* Support Files */,
+			);
+			name = "tru-sdk-ios";
+			path = "tru-sdk-ios";
+			sourceTree = "<group>";
+		};
 		B19A03EB0CFEFCB01E78864C5A7C1DED /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,20 +215,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CC9185970858EFEEA51CB6A00A74FDD1 /* Pods-PhoneCheckiOSApp */ = {
+		C0E83CDDBC3C63FFF9A82C5B3CEDDA3E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				66D2A297AFA225C3F29F5D957CBD2010 /* Pods-PhoneCheckiOSApp.modulemap */,
-				B5D6BFD58806DBB26DFB058DEC7DF0DC /* Pods-PhoneCheckiOSApp-acknowledgements.markdown */,
-				1C505DCB2A055C6EDE8D7581A2C8C5D7 /* Pods-PhoneCheckiOSApp-acknowledgements.plist */,
-				E859F5EF537A6D93525F1A6918A98A8C /* Pods-PhoneCheckiOSApp-dummy.m */,
-				B9BDD1CA585B3D17F0E8F500D2DC112F /* Pods-PhoneCheckiOSApp-Info.plist */,
-				73A4D5CC339A44F755A3C45B9F174F6A /* Pods-PhoneCheckiOSApp-umbrella.h */,
-				224DCC882955AFB3FB67B8A40754C5B4 /* Pods-PhoneCheckiOSApp.debug.xcconfig */,
-				AAB1D6627D4E30E1884AF59AA6D7DB88 /* Pods-PhoneCheckiOSApp.release.xcconfig */,
+				4829524BF6CC9014B70AEADAD6B86C74 /* Pods-PhoneCheckiOSApp */,
 			);
-			name = "Pods-PhoneCheckiOSApp";
-			path = "Target Support Files/Pods-PhoneCheckiOSApp";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -148,8 +229,9 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				313FE5FE915A4A924C55AAC02A910D61 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				2A5B10F42EC7D024B7FE9F2817308D97 /* Products */,
-				DD22815F466513EEA71DB69D5472691F /* Targets Support Files */,
+				E43DE2EDEB782F8B69F7A33730EE39E4 /* Pods */,
+				0B47B403411C1997510ADF51CB5BFA96 /* Products */,
+				C0E83CDDBC3C63FFF9A82C5B3CEDDA3E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,41 +243,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD22815F466513EEA71DB69D5472691F /* Targets Support Files */ = {
+		E43DE2EDEB782F8B69F7A33730EE39E4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CC9185970858EFEEA51CB6A00A74FDD1 /* Pods-PhoneCheckiOSApp */,
+				91E4A822E3741D2377F15E4DAEFE64B5 /* tru-sdk-ios */,
 			);
-			name = "Targets Support Files";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		92239ACEC527BCFBA8E045F11ACDD7CC /* Headers */ = {
+		DFE442325C25EA4C32FC20E6DCCB8828 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7981B335CA0AC841D240091AF92F936E /* Pods-PhoneCheckiOSApp-umbrella.h in Headers */,
+				FC921697B142E0E823FDA180BCC4F18F /* Pods-PhoneCheckiOSApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED1986904EC14812D685AA31E8D3716B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82FFC7F961BF1994F6070E68F85FF906 /* tru-sdk-ios-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A3D29715AF5B6A624B38B2FDB0C88389 /* Pods-PhoneCheckiOSApp */ = {
+		8DEFDA0C769328F34EB8C8F8DB6A1072 /* tru-sdk-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 295A4269BA696BFD84FA82D8AEF59264 /* Build configuration list for PBXNativeTarget "Pods-PhoneCheckiOSApp" */;
+			buildConfigurationList = FBC32F2AE3482CBC39C8CE881AC77FC7 /* Build configuration list for PBXNativeTarget "tru-sdk-ios" */;
 			buildPhases = (
-				92239ACEC527BCFBA8E045F11ACDD7CC /* Headers */,
-				20BA3EF13AA143D0435A4062FF52E035 /* Sources */,
-				6F2ED7E1B4496DE4FA7F26E06EA6285D /* Frameworks */,
-				A545C9CFBB241FC09AE93C82C91AF171 /* Resources */,
+				ED1986904EC14812D685AA31E8D3716B /* Headers */,
+				C06160C3ED46AD5A7266AEDC96356AFD /* Sources */,
+				B0862E8F157A914C0774C803DD033DA8 /* Frameworks */,
+				3E586707E1BE05D924BFFBF85407CC10 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F61177FEB60A08591E2D5C975CE52900 /* PBXTargetDependency */,
+			);
+			name = "tru-sdk-ios";
+			productName = tru_sdk_ios;
+			productReference = D31DE14F4910B5E9AFBE8094FF79C68D /* tru-sdk-ios */;
+			productType = "com.apple.product-type.framework";
+		};
+		A3D29715AF5B6A624B38B2FDB0C88389 /* Pods-PhoneCheckiOSApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2826D8BFC9DE3CD134CDD0B32B10C62A /* Build configuration list for PBXNativeTarget "Pods-PhoneCheckiOSApp" */;
+			buildPhases = (
+				DFE442325C25EA4C32FC20E6DCCB8828 /* Headers */,
+				1BB09808E4A74A4189AD44468ADC6544 /* Sources */,
+				1EA68CF9EDB24001988495556A54CC9D /* Frameworks */,
+				D89C72DD1D68EFCD0EFA23BB8EA15AB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85217355C472D7B34290ED49D6F5655E /* PBXTargetDependency */,
+				5F1553575B6BBDF98BBBE3DB72E73D98 /* PBXTargetDependency */,
 			);
 			name = "Pods-PhoneCheckiOSApp";
 			productName = Pods_PhoneCheckiOSApp;
@@ -220,18 +329,26 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 2A5B10F42EC7D024B7FE9F2817308D97 /* Products */;
+			productRefGroup = 0B47B403411C1997510ADF51CB5BFA96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A3D29715AF5B6A624B38B2FDB0C88389 /* Pods-PhoneCheckiOSApp */,
 				8777C9F6889E59EFFD631D80AEE9048B /* shared */,
+				8DEFDA0C769328F34EB8C8F8DB6A1072 /* tru-sdk-ios */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A545C9CFBB241FC09AE93C82C91AF171 /* Resources */ = {
+		3E586707E1BE05D924BFFBF85407CC10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D89C72DD1D68EFCD0EFA23BB8EA15AB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,7 +358,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4552119A071AC6BAB7327E6434237EC3 /* [CP-User] Build shared */ = {
+		B8A1173F7CFF964E78F715CAECEF2BCC /* [CP-User] Build shared */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,43 +371,120 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		20BA3EF13AA143D0435A4062FF52E035 /* Sources */ = {
+		1BB09808E4A74A4189AD44468ADC6544 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5BDC8C6B147CA4C7DCCD6418413D4F0 /* Pods-PhoneCheckiOSApp-dummy.m in Sources */,
+				4512C0311F8398B2470B8BE4F3EDAEA1 /* Pods-PhoneCheckiOSApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06160C3ED46AD5A7266AEDC96356AFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5FBF9B30CA636AFA385FE9B5664216 /* CellularConnectionManager.swift in Sources */,
+				772F33596E201A89D56FE283008517D7 /* ReachabilityDetails.swift in Sources */,
+				270E7EF802034F00A5E0AAEC4B7C1B2E /* TraceCollector.swift in Sources */,
+				170E39536C09A8C0402B05BD04610553 /* tru-sdk-ios-dummy.m in Sources */,
+				4B5576DA4E50C7EB275CBC0A5DB11DDE /* TruSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F61177FEB60A08591E2D5C975CE52900 /* PBXTargetDependency */ = {
+		00242D0A188E9C2B73CE247647F828E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "tru-sdk-ios";
+			target = 8DEFDA0C769328F34EB8C8F8DB6A1072 /* tru-sdk-ios */;
+			targetProxy = 950EA4EE456E17F079B09AE6E0DADF44 /* PBXContainerItemProxy */;
+		};
+		5F1553575B6BBDF98BBBE3DB72E73D98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "tru-sdk-ios";
+			target = 8DEFDA0C769328F34EB8C8F8DB6A1072 /* tru-sdk-ios */;
+			targetProxy = 6B9D0E4A821F3DC1B502E20E9580C69D /* PBXContainerItemProxy */;
+		};
+		85217355C472D7B34290ED49D6F5655E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = shared;
 			target = 8777C9F6889E59EFFD631D80AEE9048B /* shared */;
-			targetProxy = F8DC90F1F3AAF2F755EF100E0D326E50 /* PBXContainerItemProxy */;
+			targetProxy = 0313B1A609BAF5274EF878064BF0061D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1B6EAB28480B60AB33A8B63338687E30 /* Release */ = {
+		02423F88912BF0799F2E39131CB3C25E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B406B8552456CBAA10C2F07842102A95 /* shared.release.xcconfig */;
+			baseConfigurationReference = 56D6482F2675013566164612501FDBD7 /* Pods-PhoneCheckiOSApp.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		2C8888B8B2338018924BE4B0D7D36DF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 976C21B0F360F2CE2A002B96E29DF40E /* tru-sdk-ios.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/tru-sdk-ios/tru-sdk-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/tru-sdk-ios/tru-sdk-ios-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/tru-sdk-ios/tru-sdk-ios.modulemap";
+				PRODUCT_MODULE_NAME = tru_sdk_ios;
+				PRODUCT_NAME = tru_sdk_ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		593F10BFFA94DAC7D6E17FB8A7F32D72 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -420,11 +614,45 @@
 			};
 			name = Debug;
 		};
-		E147387423F68D79B1E4943339D3DE07 /* Debug */ = {
+		A22AEA0FC8B3CEA83B242CD67F0B44B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 224DCC882955AFB3FB67B8A40754C5B4 /* Pods-PhoneCheckiOSApp.debug.xcconfig */;
+			baseConfigurationReference = B406B8552456CBAA10C2F07842102A95 /* shared.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5511A8DAEB37173F096C9C60E07DC46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF5348F967A88EFC241009D3287F605D /* shared.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAD31C540F685AE760462D6F3285B6D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A481FB9EC1FA41682497738D725FE08E /* tru-sdk-ios.release.xcconfig */;
+			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -434,32 +662,31 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/tru-sdk-ios/tru-sdk-ios-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/tru-sdk-ios/tru-sdk-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/tru-sdk-ios/tru-sdk-ios.modulemap";
+				PRODUCT_MODULE_NAME = tru_sdk_ios;
+				PRODUCT_NAME = tru_sdk_ios;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		F3D8C15A1E17848254F4158B74CC8F32 /* Release */ = {
+		E06C29E16255D5A739F8F411987E4EEA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAB1D6627D4E30E1884AF59AA6D7DB88 /* Pods-PhoneCheckiOSApp.release.xcconfig */;
+			baseConfigurationReference = 00C64AEA9728186D910F9104D886D954 /* Pods-PhoneCheckiOSApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -495,31 +722,23 @@
 			};
 			name = Release;
 		};
-		F80DE7EBDDFC80B4D52BCACF2249C6B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF5348F967A88EFC241009D3287F605D /* shared.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		295A4269BA696BFD84FA82D8AEF59264 /* Build configuration list for PBXNativeTarget "Pods-PhoneCheckiOSApp" */ = {
+		2826D8BFC9DE3CD134CDD0B32B10C62A /* Build configuration list for PBXNativeTarget "Pods-PhoneCheckiOSApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E147387423F68D79B1E4943339D3DE07 /* Debug */,
-				F3D8C15A1E17848254F4158B74CC8F32 /* Release */,
+				02423F88912BF0799F2E39131CB3C25E /* Debug */,
+				E06C29E16255D5A739F8F411987E4EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CC19E9D9A6EA0D16F38BF9B9C6FC352 /* Build configuration list for PBXAggregateTarget "shared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5511A8DAEB37173F096C9C60E07DC46 /* Debug */,
+				A22AEA0FC8B3CEA83B242CD67F0B44B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -533,11 +752,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FAF69EFFAE27522789F3CA719BA83DE /* Build configuration list for PBXAggregateTarget "shared" */ = {
+		FBC32F2AE3482CBC39C8CE881AC77FC7 /* Build configuration list for PBXNativeTarget "tru-sdk-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F80DE7EBDDFC80B4D52BCACF2249C6B6 /* Debug */,
-				1B6EAB28480B60AB33A8B63338687E30 /* Release */,
+				2C8888B8B2338018924BE4B0D7D36DF9 /* Debug */,
+				DAD31C540F685AE760462D6F3285B6D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

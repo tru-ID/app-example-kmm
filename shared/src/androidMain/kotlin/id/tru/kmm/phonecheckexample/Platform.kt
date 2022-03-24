@@ -1,5 +1,5 @@
 package id.tru.kmm.phonecheckexample
-import id.tru.sdk.TruSDK
+import id.tru.sdk.*
 import android.content.Context
 
 // Shared androidMain
