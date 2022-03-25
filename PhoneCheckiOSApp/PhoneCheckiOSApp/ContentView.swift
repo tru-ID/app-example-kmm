@@ -56,7 +56,11 @@ struct ContentView: View {
                     .font(.largeTitle)
             }
             
-            
+            var platform = Platform()
+            var isReachable = platform.isReachable()
+            var kIsReachable = try? KmmTruSDK(platform: platform).isReachable()
+            let _ = print("isReachable called in iOS")
+
             
 
             Spacer()

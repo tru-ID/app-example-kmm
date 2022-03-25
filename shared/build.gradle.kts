@@ -19,8 +19,14 @@ kotlin {
         homepage = "Link to the Shared Module homepage"
         ios.deploymentTarget = "14.1"
 
+//        pod("tru-sdk-ios") {
+//            version = "0.3.1"
+//        }
         pod("tru-sdk-ios") {
             version = "0.3.1"
+            source =git("https://gitlab.com/tru-id/tru-sdk-ios.git"){
+                branch = "objc_for_kmm"
+            }
         }
 
         podfile = project.file("../PhoneCheckiOSApp/Podfile")
