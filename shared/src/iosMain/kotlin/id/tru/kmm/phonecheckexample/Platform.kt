@@ -1,5 +1,5 @@
 package id.tru.kmm.phonecheckexample
-import cocoapods.tru_sdk_ios.*
+import cocoapods.playground.*
 import platform.Foundation.NSURL
 import platform.UIKit.UIDevice
 

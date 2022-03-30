@@ -13,11 +13,11 @@
   "libraries": "c++",
   "module_name": "shared_umbrella",
   "platforms": {
-    "ios": "14.1"
+    "ios": "12.0"
   },
   "dependencies": {
-    "tru-sdk-ios": [
-      "0.3.1"
+    "playground": [
+      "0.0.1"
     ]
   },
   "pod_target_xcconfig": {

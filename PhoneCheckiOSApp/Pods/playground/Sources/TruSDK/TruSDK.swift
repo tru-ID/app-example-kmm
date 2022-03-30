@@ -2,7 +2,7 @@ import Foundation
 import CoreTelephony
 @available(macOS 10.15, *)
 @available(iOS 12.0, *)
-open class TruSDK {
+@objc open class TruSDK: NSObject {
     
     private let connectionManager: ConnectionManager
     private let operators: String?
@@ -22,7 +22,7 @@ open class TruSDK {
         self.operators = ops.joined(separator: ",")
     }
 
-    public convenience init() {
+    public override convenience init() {
         self.init(connectionManager: CellularConnectionManager())
     }
 
@@ -30,7 +30,7 @@ open class TruSDK {
     /// - Parameters:
     ///   - url: URL provided by tru.ID
     ///   - completion: closure to report check result. Note that, this closure will be called on the Main Thread.
-    public func checkUrlWithResponseBody(url: URL, completion: @escaping (Error?, [String : Any]?) -> Void) {
+    @objc public func checkUrlWithResponseBody(url: URL, completion: @escaping (Error?, [String : Any]?) -> Void) {
         connectionManager.check(url: url, operators: self.operators, completion: completion)
     }
 
@@ -38,10 +38,13 @@ open class TruSDK {
     /// - Parameters:
     ///   - url: URL provided by tru.ID
     ///   - completion: closure to report check result and the trace information. Note that, this closure will be called on the Main Thread.
-    public func checkWithTrace(url: URL, completion: @escaping (Error?, TraceInfo?) -> Void) {
+    @objc public func checkWithTrace(url: URL, completion: @escaping (Error?, TraceInfo?) -> Void) {
         connectionManager.checkWithTrace(url: url, operators: self.operators, completion: completion)
     }
     
+    @objc public func testFunction(url: URL) {
+        print("test url: \(url)")
+    }
     
     /// This method perform a request to a TruId enpoint and reports back the details if the connection was made over
     /// cellular.
@@ -69,7 +72,7 @@ open class TruSDK {
         }
     }
 
-    @available(*, deprecated, renamed: "getCheckUrlResponseBody(url:completion:)")
+    @available(*, deprecated, renamed: "checkUrlWithResponseBody(url:completion:)")
     public func check(url: URL, completion: @escaping (Error?) -> Void) {
         connectionManager._check(url: url, operators: self.operators, completion: completion)
     }

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double tru_sdk_iosVersionNumber;
-FOUNDATION_EXPORT const unsigned char tru_sdk_iosVersionString[];
+FOUNDATION_EXPORT double playgroundVersionNumber;
+FOUNDATION_EXPORT const unsigned char playgroundVersionString[];
 

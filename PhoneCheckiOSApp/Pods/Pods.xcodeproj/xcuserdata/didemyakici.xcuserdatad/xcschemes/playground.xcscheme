@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8DEFDA0C769328F34EB8C8F8DB6A1072"
-               BuildableName = "tru_sdk_ios.framework"
-               BlueprintName = "tru-sdk-ios"
+               BlueprintIdentifier = "9864F7249988C7CB3135B8AF78D9DE06"
+               BuildableName = "playground.framework"
+               BlueprintName = "playground"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

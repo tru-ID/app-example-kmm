@@ -58,10 +58,8 @@ struct ContentView: View {
             
             var platform = Platform()
             var isReachable = platform.isReachable()
-            var kIsReachable = try? KmmTruSDK(platform: platform).isReachable()
-            let _ = print("isReachable called in iOS")
-
-            
+//            var kIsReachable = try? platform.k
+//            let _ = print("isReachable called in iOS")
 
             Spacer()
             

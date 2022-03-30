@@ -15,20 +15,16 @@ kotlin {
     iosSimulatorArm64()
 
     cocoapods {
+
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
-        ios.deploymentTarget = "14.1"
+        ios.deploymentTarget = "12.0"
 
-//        pod("tru-sdk-ios") {
-//            version = "0.3.1"
-//        }
-        pod("tru-sdk-ios") {
-            version = "0.3.1"
-            source =git("https://gitlab.com/tru-id/tru-sdk-ios.git"){
-                branch = "objc_for_kmm"
-            }
+        pod("playground") {
+            version = "0.0.1"
+            source = path(project.file("/Users/didemyakici/Documents/Development/Tru.ID_GitLab/playground"))
         }
-
+        
         podfile = project.file("../PhoneCheckiOSApp/Podfile")
         framework {
             baseName = "shared"

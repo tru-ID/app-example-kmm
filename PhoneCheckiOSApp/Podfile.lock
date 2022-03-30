@@ -1,23 +1,23 @@
 PODS:
+  - playground (0.0.1)
   - shared (1.0):
-    - tru-sdk-ios (= 0.3.1)
-  - tru-sdk-ios (0.3.1)
+    - playground (= 0.0.1)
 
 DEPENDENCIES:
   - shared (from `../shared`)
 
 SPEC REPOS:
   trunk:
-    - tru-sdk-ios
+    - playground
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared"
 
 SPEC CHECKSUMS:
-  shared: b0d4e82858c27c34ec1b8df5cf2570021a3c50db
-  tru-sdk-ios: 715787454ad4acf8e32e3b182ea9970a20809d7a
+  playground: 1e4ab262537d393fc6fd92fef77353fb52b30a5e
+  shared: 88af64d301624580c700db480e5808620db41284
 
-PODFILE CHECKSUM: f05ac038990857c6a1f5282a6c5041d3d174f051
+PODFILE CHECKSUM: 7372bd98fbf840acff845052f999e9f4fb700a9e
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.10.1

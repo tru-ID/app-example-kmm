@@ -1,5 +1,5 @@
 target 'PhoneCheckiOSApp' do
   use_frameworks!
-  platform :ios, '14.1'
+  platform :ios, '12.0'
   pod 'shared', :path => '../shared'
 end

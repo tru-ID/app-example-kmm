@@ -11,9 +11,9 @@ Pod::Spec.new do |spec|
     spec.libraries                = "c++"
     spec.module_name              = "#{spec.name}_umbrella"
 
-    spec.ios.deployment_target = '14.1'
+    spec.ios.deployment_target = '12.0'
 
-    spec.dependency 'tru-sdk-ios', '0.3.1'
+    spec.dependency 'playground', '0.0.1'
 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':shared',
