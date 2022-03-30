@@ -22,7 +22,7 @@ kotlin {
 
         pod("playground") {
             version = "0.0.1"
-            source = path(project.file("/Users/didemyakici/Documents/Development/Tru.ID_GitLab/playground"))
+            source = git ("https://gitlab.com/tru-id/playground.git") { tag = "0.0.1"}
         }
         
         podfile = project.file("../PhoneCheckiOSApp/Podfile")
