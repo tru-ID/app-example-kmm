@@ -45,7 +45,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation("id.tru.sdk:tru-sdk-android:0.3.1")
+                implementation("id.tru.sdk:tru-sdk-android:0.3.2")
             }
         }
         val androidTest by getting
@@ -71,10 +71,10 @@ kotlin {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = 30
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
-        minSdk = 26
-        targetSdk = 32
+        minSdk = 21
+        targetSdk = 30
     }
 }

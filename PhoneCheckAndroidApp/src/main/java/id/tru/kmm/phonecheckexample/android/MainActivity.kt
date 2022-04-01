@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import id.tru.kmm.phonecheckexample.KReachabilityDetails
+import id.tru.kmm.phonecheckexample.KTraceInfo
 import id.tru.kmm.phonecheckexample.KmmTruSDK
 import id.tru.kmm.phonecheckexample.Platform
 import kotlinx.coroutines.CoroutineScope
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d(TAG, "During Coroutine")
                 val isReachable = sdk.isReachable()
                 Log.d(TAG, "isReachable called")
+                Log.d(TAG, "KReachability Details: $KReachabilityDetails")
                 val isRequestOnMobileNetwork = sdk.openCheckURL("")
                 //val traceInfo = sdk.checkWithTrace(URL("https://www.cnn.com"))
                 launch(Dispatchers.Main) {
