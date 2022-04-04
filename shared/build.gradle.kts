@@ -21,8 +21,8 @@ kotlin {
         ios.deploymentTarget = "12.0"
 
         pod("playground") {
-            version = "0.0.1"
-            source = git ("https://gitlab.com/tru-id/playground.git") { tag = "0.0.1"}
+            version = "0.0.3"
+            source = git ("https://gitlab.com/tru-id/playground.git") { tag = "0.0.3"}
         }
         
         podfile = project.file("../PhoneCheckiOSApp/Podfile")

@@ -15,7 +15,7 @@ actual class Platform(private val context: Context)  {
     @Throws(Exception::class)
     actual final suspend fun checkUrlWithResponseBody(url: String): Map<Any?, Any?>? {
         val json = this.truSDK.checkUrlWithResponseBody(url)
-        //turn json object to map
+        //TODO: turn json object to map
         return null
     }
 

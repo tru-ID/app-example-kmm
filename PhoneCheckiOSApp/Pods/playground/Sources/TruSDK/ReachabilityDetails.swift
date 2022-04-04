@@ -9,10 +9,10 @@ import Foundation
 
 /// A struct to hold the details of the Cellular network a request is made.
 @objc public class ReachabilityDetails: NSObject, Codable {
-    public let countryCode: String
-    public let networkId: String
-    public let networkName: String
-    public let products: [Product]?
+    @objc public let countryCode: String
+    @objc public let networkId: String
+    @objc public let networkName: String
+    @objc public let products: [Product]?
     
     public init(countryCode: String, networkId: String, networkName: String, products: [Product]?) {
         self.countryCode = countryCode
@@ -55,8 +55,8 @@ import Foundation
 
 /// The TruID products available for the application developer on the celluar network the app is connected to.
 @objc public class Product: NSObject, Codable {
-    public let productId: String
-    public let productName: String
+    @objc public let productId: String
+    @objc public let productName: String
     
     public init(productId: String, productName: String) {
         self.productId = productId
@@ -72,10 +72,10 @@ import Foundation
 /// A struct to hold the details of the error when `isReachable(...) request is made.
 /// If the request was not made on a Cellular network, this struct will represent the details of the error.
 @objc public class ReachabilityError: NSObject, Error, Codable {
-    public let type: String
-    public let title: String
-    public let status: Int
-    public let detail: String
+    @objc public let type: String
+    @objc public let title: String
+    @objc public let status: Int
+    @objc public let detail: String
     
     public init(type: String, title: String, status: Int, detail: String) {
         self.type = type

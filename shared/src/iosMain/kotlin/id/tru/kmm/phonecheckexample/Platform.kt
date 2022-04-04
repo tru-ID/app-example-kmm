@@ -1,6 +1,5 @@
 package id.tru.kmm.phonecheckexample
-import cocoapods.playground.TraceInfo
-import cocoapods.playground.TruSDK
+import cocoapods.playground.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
@@ -8,36 +7,34 @@ import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.yield
 import platform.Foundation.NSError
 import platform.Foundation.NSURL
+import platform.darwin.NSInteger
 import kotlin.time.Duration
 
 //Shared iOSMain
 actual class Platform {
 
     private val truSDK: TruSDK = TruSDK()
-    init {
-
-    }
 
     @Throws(Exception::class)
     actual final suspend fun checkUrlWithResponseBody(url: String): Map<Any?, Any?>? {
         val mutex = Mutex()
         val url = NSURL(string = url)
-        println("KMM: checkWithTrace called with $url")
+        println("2 - KMM: checkWithTrace called with $url")
         var nError: NSError? = null
         var nMap: Map<Any?, *>? = null
         fun protoClosure(error:NSError?, map: Map<Any?, *>?): Unit {
-            println("KMM: protoClosure has been called.")
+            println("4 - KMM: protoClosure has been called.")
             nError = error
             nMap = map
-            println("KMM: Before UnLock")
+            println("5 - KMM: Before UnLock")
             mutex.unlock()
         }
         mutex.lock()
         truSDK.checkUrlWithResponseBodyWithUrl(url = url, ::protoClosure)
-        println("Is locked? $mutex.isLocked")
+        println("3 - Is locked? $mutex.isLocked")
         mutex.withLock {
-            println("KMM: WithLock")
-            println("KMM: Results: $nError - $nMap")
+            println("6 - KMM: WithLock")
+            println("7 - KMM: Results: $nError - $nMap")
             return nMap
         }
     }
@@ -62,7 +59,10 @@ actual class Platform {
             println("KMM: WithLock")
             val info: KDebugInfo = KDebugInfo("")
             println("KMM: Results: $nError - $nTraceInfo")
-            return KTraceInfo("", debugInfo = info, responseBody = "")
+            return KTraceInfo(
+                trace = nTraceInfo?.trace() ?: "" ,
+                debugInfo = info,
+                responseBody = nTraceInfo?.responseBody().toString())
         }
     }
 
@@ -70,29 +70,40 @@ actual class Platform {
     actual final suspend fun isReachable(): KReachabilityDetails? {
         print("isReachable called.")
         val mutex = Mutex()
-        var nError: KReachabilityError? = null
         var nDetails: KReachabilityDetails? = null
-        fun protoClosure(details: KReachabilityDetails?, error: KReachabilityError?) {
+
+        fun protoClosure(details: ReachabilityDetails?, error: ReachabilityError?) {
             println("KMM: protoClosure has been called.")
             println("KMM: Before UnLock")
-            nError = error
-            nDetails = details
+            val nError = KReachabilityError(error?.type(), error?.title(), error?.status() as Int, error.detail()) //TODO: check type casting for NSInteger to Int
+
+            var kProducts: ArrayList<KProduct> = ArrayList()
+            details?.let {
+                it.products()?.let {
+                    for (product in it) {
+                        val p = KProduct(productId = (product as Product).productId(),
+                            productName = (product as Product).productName())
+                        kProducts.add(p)
+                    }
+                }
+            }
+
+            nDetails = KReachabilityDetails(
+                error = nError,
+                countryCode = details?.countryCode() ?: "",
+                networkId = details?.networkId() ?: "",
+                networkName = details?.networkName() ?: "",
+                products = kProducts,
+                link = ""
+            )
             mutex.unlock()
         }
+
         mutex.lock()
-        //TODO: Playground project updated, needs publishing
-        //truSDK.isReachable(::protoClosure)
+        truSDK.isReachableWithCompletion(::protoClosure)
         println("KMM: Is locked? $mutex.isLocked")
         mutex.withLock {
-            // Use nDetails to populate the below
-            return KReachabilityDetails(
-                error = null,
-                countryCode = "reachabilityDetails.countryCode",
-                networkId = "reachabilityDetails.networkId",
-                networkName = "reachabilityDetails.networkName",
-                products = null,
-                link = "reachabilityDetails.link"
-            )
+            return nDetails
         }
     }
 
@@ -100,29 +111,38 @@ actual class Platform {
     actual final suspend fun isReachableWithDataResidency(dataResidency: String?): KReachabilityDetails? {
         print("isReachableWithDataResidency called.")
         val mutex = Mutex()
-        var nError: KReachabilityError? = null
         var nDetails: KReachabilityDetails? = null
-        fun protoClosure(details: KReachabilityDetails?, error: KReachabilityError?) {
+        fun protoClosure(details: ReachabilityDetails?, error: ReachabilityError?) {
             println("KMM: protoClosure has been called.")
             println("KMM: Before UnLock")
-            nError = error
-            nDetails = details
+
+            val nError = KReachabilityError(error?.type(),error?.title(), error?.status() as Int, error.detail() )
+            var kProducts: ArrayList<KProduct> = ArrayList()
+            details?.let {
+                it.products()?.let {
+                    for (product in it) {
+                        val kProduct: KProduct = KProduct(productId = (product as Product).productId(), productName = (product as Product).productName())
+                    }
+                }
+
+            }
+
+            nDetails = KReachabilityDetails(
+                error = nError,
+                countryCode = details?.countryCode() ?: "",
+                networkId = details?.networkId() ?: "",
+                networkName = details?.networkName() ?: "",
+                products = kProducts,
+                link = ""
+            )
             mutex.unlock()
         }
         mutex.lock()
-        //TODO: Playground project updated, needs publishing
-        //truSDK.isReachable(dataResidency = dataResidency, ::protoClosure)
+        truSDK.isReachableWithDataResidency(dataResidency = dataResidency, ::protoClosure)
         println("KMM: Is locked? $mutex.isLocked")
+
         mutex.withLock {
-            // Use nDetails to populate the below
-            return KReachabilityDetails(
-                error = null,
-                countryCode = "reachabilityDetails.countryCode",
-                networkId = "reachabilityDetails.networkId",
-                networkName = "reachabilityDetails.networkName",
-                products = null,
-                link = "reachabilityDetails.link"
-            )
+            return nDetails
         }
     }
 

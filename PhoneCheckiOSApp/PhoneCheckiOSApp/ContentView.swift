@@ -59,11 +59,10 @@ struct ContentView: View {
             
             let platform = Platform()
             
-            let _ = print("App: checkUrlWithResponseBody will be called")
+            let _ = print("1 - App: checkUrlWithResponseBody will be called")
             let _ = platform.checkUrlWithResponseBody(url: "http://www.cnn.com") { responseDict, error in
-                print("App: checkUrlWithResponseBody:: Swift closure call with \(responseDict) - \(error)")
+                print("Last - App: checkUrlWithResponseBody:: Swift closure call with \(responseDict) - \(error)")
             }
-            let _ = print("App: checkUrlWithResponseBody is called")
             
 //            let _ = platform.checkWithTrace(url: "http://www.cnn.com") { traceInfo, error in
 //                print("checkWithTrace:: Swift closure call with \(traceInfo) - \(error)")

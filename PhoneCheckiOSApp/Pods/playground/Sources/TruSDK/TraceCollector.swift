@@ -126,9 +126,9 @@ import os
 }
 
 @objc public class TraceInfo: NSObject {
-    public let trace: String
-    public let debugInfo: DebugInfo
-    public let responseBody: [String : Any]?
+    @objc public let trace: String
+    @objc public let debugInfo: DebugInfo
+    @objc public let responseBody: [String : Any]?
     
     public init(trace: String, debugInfo: DebugInfo, responseBody: [String : Any]?) {
         self.trace = trace

@@ -71,6 +71,31 @@ import CoreTelephony
             completion(connectionResult)
         }
     }
+    
+    // Objective-C compatible
+    @objc public func isReachable(dataResidency: String?, completion: @escaping (ReachabilityDetails?, ReachabilityError?) -> Void) {
+        connectionManager.isReachable(dataResidency: dataResidency, operators: self.operators) { connectionResult in
+            switch connectionResult {
+            case .failure(let reachabilityError): do {
+                if let error = reachabilityError {
+                    let err = ReachabilityError(type: error.type, title: error.title, status: -1, detail: error.detail)
+                    completion(nil, err)
+                } else {
+                    completion(nil, ReachabilityError(type: "Unknown", title: "No Error type", status: -1, detail: "Received an error with no known type"))
+                }
+            }
+            case .success(let reachabilityDetails): completion(reachabilityDetails, nil)
+            }
+        }
+    }
+    
+    // Objective-C compatible
+    @objc public func isReachable(completion: @escaping (ReachabilityDetails?, ReachabilityError?) -> Void) {
+        isReachable(dataResidency: nil) { connectionResult, error in
+            completion(connectionResult, error)
+        }
+    }
+
 
     @available(*, deprecated, renamed: "checkUrlWithResponseBody(url:completion:)")
     public func check(url: URL, completion: @escaping (Error?) -> Void) {
