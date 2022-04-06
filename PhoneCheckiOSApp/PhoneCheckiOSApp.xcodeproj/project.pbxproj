@@ -12,6 +12,7 @@
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		2260731B65A662EA2E81A588 /* Pods_PhoneCheckiOSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6BA863DF93E82FFC2D82F1 /* Pods_PhoneCheckiOSApp.framework */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		C40B7E5627FCC376004F94B5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40B7E5527FCC376004F94B5 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		7555FF7B242A565900829871 /* PhoneCheckiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneCheckiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C40B7E5527FCC376004F94B5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C4AD285327EDF26F00CA0A2C /* tru_sdk_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = tru_sdk_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AD285527EDF2F000CA0A2C /* tru_sdk_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = tru_sdk_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6BA863DF93E82FFC2D82F1 /* Pods_PhoneCheckiOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneCheckiOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 			children = (
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
+				C40B7E5527FCC376004F94B5 /* APIManager.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40B7E5627FCC376004F94B5 /* APIManager.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
@@ -350,6 +354,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MY_APP_SERVER_URL = "https://9630-2a00-23c7-8589-8d01-58de-2011-691f-9e8f.ngrok.io";
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.PhoneCheckiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -372,6 +377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MY_APP_SERVER_URL = "https://9630-2a00-23c7-8589-8d01-58de-2011-691f-9e8f.ngrok.io";
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.PhoneCheckiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
