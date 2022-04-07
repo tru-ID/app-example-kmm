@@ -10,6 +10,9 @@ struct ContentView: View {
     @State var isLoading: Bool = false
     @State var check: APIManager.Check?
     @State var checkStatus: APIManager.CheckStatus?
+    @State var endResult = ""
+    var resultTrue = "\u{2705}"
+    var resultFalse = "\u{274C}"
     var phoneNumberTest = NSPredicate(format: "SELF MATCHES %@", "^[0-9+]{0,1}+[0-9]{5,16}$")
     
     let platform = Platform()
@@ -44,8 +47,8 @@ struct ContentView: View {
                 //progressView and result states to be managed
                 doPhoneCheck(phoneNumber: phoneNumber)
                 let _ = print(phoneNumber)
-                verifyButton.toggle()
                 isLoading.toggle()
+                hideKeyboard()
             }
             .padding()
             .font(.title2)
@@ -60,9 +63,11 @@ struct ContentView: View {
                     .font(.largeTitle)
             }
             if verifyButton {
-                Text("result")
+                Text(self.endResult)
                     .font(.largeTitle)
             }
+            
+            
             
             //            DispatchQueue.main.async {
             //                print("[isReachable] Starting")
@@ -126,8 +131,10 @@ struct ContentView: View {
                                 isLoading.toggle()
                                 self.checkStatus = s
                                 if (s.match) {
+                                    endResult = resultTrue
                                     print("\u{2705}")
                                 } else {
+                                    endResult = resultFalse
                                     print("\u{274C}")
                                 }
                             }
@@ -136,12 +143,13 @@ struct ContentView: View {
                 }
             case .failure(let status):
                 DispatchQueue.main.async {
-                    //Rollback the UI state with the updated results.
                     verifyButton.toggle()
                     isLoading.toggle()
                     if (status == APIManager.CheckError.badRequest) {
+                        endResult = resultFalse + "wrong format"
                         print("\u{274C} wrong format")
                     } else {
+                        endResult = resultFalse + "error"
                         print("\u{274C} error")
                     }
                 }
@@ -154,6 +162,11 @@ struct ContentView: View {
 }
 
 
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
