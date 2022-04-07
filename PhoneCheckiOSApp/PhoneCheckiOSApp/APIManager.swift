@@ -11,7 +11,12 @@ import SwiftUI
 
 final class APIManager {
     
-    private let serverUrl = Bundle.main.object(forInfoDictionaryKey: "appServerUrl") as! String
+    private var serverUrl: String 
+    
+    public init(url: String) {
+        self.serverUrl = url
+    }
+    
     enum CheckError: Error{
         case badRequest
         case internalError
