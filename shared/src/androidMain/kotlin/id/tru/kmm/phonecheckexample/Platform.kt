@@ -36,7 +36,7 @@ actual class Platform(private val context: Context)  {
         val reachabilityDetails = this.truSDK.isReachable()
         val kReachabilityError: KReachabilityError = KReachabilityError(reachabilityDetails?.error?.type,
             reachabilityDetails?.error?.title,
-            reachabilityDetails?.error?.status ?: -1, //IF status exists use it, otherwise -1 -> Elvis operator
+            reachabilityDetails?.error?.status as Long,
             reachabilityDetails?.error?.detail)
 
         val kProducts: ArrayList<KProduct> = ArrayList()
@@ -64,7 +64,7 @@ actual class Platform(private val context: Context)  {
         val reachabilityDetails = this.truSDK.isReachable(dataResidency)
         val kReachabilityError: KReachabilityError = KReachabilityError(reachabilityDetails?.error?.type,
             reachabilityDetails?.error?.title,
-            reachabilityDetails?.error?.status!!,
+            reachabilityDetails?.error?.status as Long,
             reachabilityDetails?.error?.detail)
         val products: ArrayList<Product>? = reachabilityDetails.products
         val kProducts: ArrayList<KProduct>? = ArrayList()

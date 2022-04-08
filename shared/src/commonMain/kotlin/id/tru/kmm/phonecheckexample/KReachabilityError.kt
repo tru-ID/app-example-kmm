@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
 data class KReachabilityError (
     val type: String?,
     val title: String?,
-    val status: Int,
+    val status: Long,
     val detail: String?,
     ) {
 

@@ -75,8 +75,15 @@ actual class Platform {
         fun protoClosure(details: ReachabilityDetails?, error: ReachabilityError?) {
             println("KMM: protoClosure has been called.")
             println("KMM: Before UnLock")
-            val nError = KReachabilityError(error?.type(), error?.title(), error?.status() as Int, error.detail()) //TODO: check type casting for NSInteger to Int
-
+            var nError : KReachabilityError? = null
+            error?.let {
+                nError = KReachabilityError(
+                    it.type(),
+                    it.title(),
+                    it.status() as Long,
+                    it.detail())
+            }
+            println("KMM: Reachability Error created")
             var kProducts: ArrayList<KProduct> = ArrayList()
             details?.let {
                 it.products()?.let {
@@ -85,9 +92,10 @@ actual class Platform {
                             productName = (product as Product).productName())
                         kProducts.add(p)
                     }
+                    println("KMM: for loop complete")
                 }
             }
-
+            println("KMM: Listed products")
             nDetails = KReachabilityDetails(
                 error = nError,
                 countryCode = details?.countryCode() ?: "",
@@ -96,6 +104,7 @@ actual class Platform {
                 products = kProducts,
                 link = ""
             )
+            println("KMM: Unlocking")
             mutex.unlock()
         }
 
@@ -115,18 +124,27 @@ actual class Platform {
         fun protoClosure(details: ReachabilityDetails?, error: ReachabilityError?) {
             println("KMM: protoClosure has been called.")
             println("KMM: Before UnLock")
-
-            val nError = KReachabilityError(error?.type(),error?.title(), error?.status() as Int, error.detail() )
+            var nError : KReachabilityError? = null
+            error?.let {
+                nError = KReachabilityError(
+                    it.type(),
+                    it.title(),
+                   it.status() as Long,
+                   it.detail())
+            }
+            println("KMM: Reachability Error created")
             var kProducts: ArrayList<KProduct> = ArrayList()
             details?.let {
                 it.products()?.let {
                     for (product in it) {
-                        val kProduct: KProduct = KProduct(productId = (product as Product).productId(), productName = (product as Product).productName())
+                        val p = KProduct(productId = (product as Product).productId(), productName = (product as Product).productName())
+                        kProducts.add(p)
                     }
+                    println("KMM: for loop complete")
                 }
 
             }
-
+            println("KMM: Listed products")
             nDetails = KReachabilityDetails(
                 error = nError,
                 countryCode = details?.countryCode() ?: "",
@@ -135,6 +153,7 @@ actual class Platform {
                 products = kProducts,
                 link = ""
             )
+            println("KMM: Unlocking")
             mutex.unlock()
         }
         mutex.lock()
