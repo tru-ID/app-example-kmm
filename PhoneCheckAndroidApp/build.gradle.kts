@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    kotlin("kapt")
 }
 //def props = new Properties()
 //file("tru.properties").withInputStream { props.load(it) }
@@ -28,16 +29,16 @@ android {
         }
     }
 
-    dataBinding {
-        android.buildFeatures.dataBinding = true
-    }
+    buildFeatures{viewBinding = true}
 
 }
 var kotlinCoVersion = "1.6.0"
 val kotlinVersion = "1.6.10"
 dependencies {
     implementation(project(":shared"))
+    implementation ("commons-io:commons-io:2.4")
     implementation("com.google.android.material:material:1.4.0")
+    implementation ("androidx.annotation:annotation:1.2.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoVersion")

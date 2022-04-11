@@ -17,8 +17,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import id.tru.kmm.phonecheckexample.android.R
-import id.tru.kmm.phonecheckexample.android.databinding.ActivityLoginBinding
 import id.tru.kmm.phonecheckexample.android.model.Step
+import id.tru.kmm.phonecheckexample.android.databinding.ActivityLoginBinding
 import id.tru.kmm.phonecheckexample.KmmTruSDK
 
 
@@ -138,7 +138,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "onResume: TruSDK is being initialised")
-        TruSDK.initializeSdk(applicationContext)
+//        TruSDK.initializeSdk(applicationContext)
     }
 
     private fun resetProgress() {
