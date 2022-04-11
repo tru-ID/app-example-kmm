@@ -354,7 +354,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MY_APP_SERVER_URL = "https://9630-2a00-23c7-8589-8d01-58de-2011-691f-9e8f.ngrok.io";
+				MY_APP_SERVER_URL = "https://74b3-2a00-23c7-8589-8d01-2d6f-82cd-46df-5b07.ngrok.io";
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.PhoneCheckiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -377,7 +377,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MY_APP_SERVER_URL = "https://9630-2a00-23c7-8589-8d01-58de-2011-691f-9e8f.ngrok.io";
+				MY_APP_SERVER_URL = "https://74b3-2a00-23c7-8589-8d01-2d6f-82cd-46df-5b07.ngrok.io";
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.PhoneCheckiOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
