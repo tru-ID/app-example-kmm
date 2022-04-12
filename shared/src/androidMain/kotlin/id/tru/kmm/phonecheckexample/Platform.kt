@@ -15,8 +15,27 @@ actual class Platform(private val context: Context)  {
     @Throws(Exception::class)
     actual final suspend fun checkUrlWithResponseBody(url: String): Map<Any?, Any?>? {
         val json = this.truSDK.checkUrlWithResponseBody(url)
-        //TODO: turn json object to map
-        return null
+            if (json == null) {
+                return null
+            } else {
+                return if (json.has("code") && json.has("check_id")) {
+                    val success = mapOf("code" to json["code"],
+                        "check_id" to json["check_id"],
+                        "reference_id" to json["reference_id"]
+                    )
+                    success as? Map<Any?, Any?>
+                } else if (json.has("error") && json.has("error_description")) {
+                    val failure = mapOf("error" to json["error"],
+                        "error_description" to json["error_description"],
+                        "check_id" to json["check_id"],
+                        "reference_id" to json["reference_id"]
+                    )
+                    failure as? Map<Any?, Any?>
+                } else {
+                    emptyMap()
+                }
+            }
+
     }
 
     @Throws(Exception::class)
