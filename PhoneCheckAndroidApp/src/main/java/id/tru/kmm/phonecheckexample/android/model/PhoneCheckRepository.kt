@@ -56,12 +56,12 @@ class PhoneCheckRepository(val dataSource: PhoneCheckDataSource) {
                     progressUpdate = Triple(Step.SECOND, R.string.phone_check_step2,true)))
 
                 // Step 2: Open the check_url
-                val isExecutedOnCellular = dataSource.openCheckURL(checkResult.data.check_url)
+                val isExecutedOnCellular = dataSource.checkUrlWithResponseBody(checkResult.data.check_url)
                 currentTime = System.currentTimeMillis()
                 Log.d(TAG, "redirect done [" + (currentTime - startTime) + "ms]")
 
                 //Here - Signal Step3 Update
-                val step3Update = if (isExecutedOnCellular) {
+                val step3Update = if (isExecutedOnCellular != null) {
                     Triple(Step.THIRD, R.string.phone_check_step3,true)
                 } else {
                     Triple(Step.THIRD, R.string.phone_check_step3_error,false)

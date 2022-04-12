@@ -20,15 +20,18 @@ import id.tru.kmm.phonecheckexample.android.R
 import id.tru.kmm.phonecheckexample.android.model.Step
 import id.tru.kmm.phonecheckexample.android.databinding.ActivityLoginBinding
 import id.tru.kmm.phonecheckexample.KmmTruSDK
-
-
+import id.tru.kmm.phonecheckexample.Platform
+import id.tru.kmm.phonecheckexample.android.MainActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.Dispatchers
 /**
  * Add blazingly fast mobile phone verification to your app for 2FA or passwordless onboarding.
  * Leveraging the tru.ID PhoneCheck API confirms ownership of a mobile phone number by verifying
  * the possession of an active SIM card with the same number.
  */
 class LoginActivity : AppCompatActivity() {
-
+    private val sdk = Platform(context = this)
     private lateinit var phoneCheckViewModel: PhoneCheckViewModel
     private lateinit var binding: ActivityLoginBinding
 
@@ -46,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
 
         tcAccepted.movementMethod = LinkMovementMethod.getInstance()
 
-        phoneCheckViewModel = ViewModelProvider(this, VerifyViewModelFactory()).get(PhoneCheckViewModel::class.java)
+        phoneCheckViewModel = ViewModelProvider(this, VerifyViewModelFactory(applicationContext)).get(PhoneCheckViewModel::class.java)
 
         phoneCheckViewModel.verificationFormState.observe(this@LoginActivity, Observer {
             val loginState = it ?: return@Observer
@@ -138,7 +141,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "onResume: TruSDK is being initialised")
+
 //        TruSDK.initializeSdk(applicationContext)
+
     }
 
     private fun resetProgress() {

@@ -14,8 +14,8 @@ import kotlinx.coroutines.Dispatchers
 
 
 class MainActivity : AppCompatActivity() {
-    private val sdk = KmmTruSDK(Platform(this))
-
+//    private val sdk = KmmTruSDK(Platform(this))
+    private val sdk = Platform(context = this)
     companion object {
         private const val TAG = "AppActivity"
     }
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                 val isReachable = sdk.isReachable()
                 Log.d(TAG, "isReachable called")
                 Log.d(TAG, "KReachability Details: $KReachabilityDetails")
-                val isRequestOnMobileNetwork = sdk.openCheckURL("")
+                val isRequestOnMobileNetwork = sdk.checkUrlWithResponseBody("")
                 //val traceInfo = sdk.checkWithTrace(URL("https://www.cnn.com"))
                 launch(Dispatchers.Main) {
                     print("Calling results on main thread")

@@ -1,5 +1,5 @@
 package id.tru.kmm.phonecheckexample.android.model
-
+import android.content.Context
 import android.util.Log
 import id.tru.kmm.phonecheckexample.android.api.RetrofitBuilder
 import id.tru.kmm.phonecheckexample.KReachabilityDetails
@@ -13,7 +13,8 @@ import java.util.*
 /**
  * Class that handles phone check
  */
-class PhoneCheckDataSource {
+class PhoneCheckDataSource(applicationContext: Context) {
+    private val sdk = Platform(context = applicationContext)
 
     // Step 1: Create a Phone Check
     @Throws(Exception::class)
@@ -29,11 +30,9 @@ class PhoneCheckDataSource {
 
     // Step 2: Check URL
     @Throws(Exception::class)
-    suspend fun openCheckURL(checkURL: String): Boolean {
-        Log.d("TruSDK", "Triggering open check url $checkURL")
-//        val truSdk = TruSDK.getInstance()
-        val truSdk = id.tru.kmm.phonecheckexample.KmmTruSDK
-        return truSdk.openCheckUrl(checkURL)
+    suspend fun checkUrlWithResponseBody(url: String): Map<Any?, Any?>? {
+        Log.d("TruSDK", "Triggering open check url $url")
+        return sdk.checkUrlWithResponseBody(url)
     }
 
     // Step 3: Get Phone Check Result
@@ -49,25 +48,23 @@ class PhoneCheckDataSource {
     }
 
     @Throws(Exception::class)
-    suspend fun checkWithTrace(checkURL: String): TraceInfo {
-        Log.d("TruSDK", "Triggering checkWithTrace url $checkURL")
-        val truSdk = TruSDK.getInstance()
-        return truSdk.checkWithTrace(URL(checkURL))
+    suspend fun checkWithTrace(url: String): KTraceInfo {
+        Log.d("TruSDK", "Triggering checkWithTrace url $url")
+        return sdk.checkWithTrace(url)
     }
 
     @Throws(Exception::class)
-    fun isReachable(): ReachabilityDetails? {
+    suspend fun isReachable(): KReachabilityDetails? {
         Log.d("TruSDK", "Triggering isReachable")
-        val truSdk = TruSDK.getInstance()
-        return truSdk.isReachable()
+        return sdk.isReachable()
     }
 
-    @Throws(Exception::class)
-    fun getJSON(): String? {
-        val baseURL = "https://tidy-crab-73.loca.lt/my-ip"
-        val truSdk = TruSDK.getInstance()
-        return truSdk.getJsonPropertyValue(baseURL, "ip_address")
-    }
+//    @Throws(Exception::class)
+//    fun getJSON(): String? {
+//        val baseURL = "https://tidy-crab-73.loca.lt/my-ip"
+////        val truSdk = TruSDK.getInstance()
+//        return truSdk.getJsonPropertyValue(baseURL, "ip_address")
+//    }
 
     companion object {
         private const val TAG = "PhoneCheckActivity"

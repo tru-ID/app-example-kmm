@@ -48,7 +48,8 @@ actual class Platform(private val context: Context)  {
                 }
             }
         }
-        //turn reachabilityDetails object to KReachabilityDetails
+
+
         if (reachabilityDetails != null) return KReachabilityDetails(
             error = kReachabilityError,
             countryCode = reachabilityDetails.countryCode,
