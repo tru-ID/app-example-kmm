@@ -1,7 +1,6 @@
 package id.tru.kmm.phonecheckexample
 import id.tru.sdk.*
 import android.content.Context
-import kotlinx.serialization.SerialName
 import java.net.URL
 
 // Shared androidMain
@@ -15,27 +14,24 @@ actual class Platform(private val context: Context)  {
     @Throws(Exception::class)
     actual final suspend fun checkUrlWithResponseBody(url: String): Map<Any?, Any?>? {
         val json = this.truSDK.checkUrlWithResponseBody(url)
-            if (json == null) {
-                return null
-            } else {
+            if (json != null) {
                 return if (json.has("code") && json.has("check_id")) {
-                    val success = mapOf("code" to json["code"],
-                        "check_id" to json["check_id"],
-                        "reference_id" to json["reference_id"]
-                    )
-                    success as? Map<Any?, Any?>
+                    mapOf("code" to json["code"])
+                            as? Map<Any?, Any?>
                 } else if (json.has("error") && json.has("error_description")) {
-                    val failure = mapOf("error" to json["error"],
+                    mapOf(
+                        "error" to json["error"],
                         "error_description" to json["error_description"],
                         "check_id" to json["check_id"],
                         "reference_id" to json["reference_id"]
                     )
-                    failure as? Map<Any?, Any?>
+                            as? Map<Any?, Any?>
                 } else {
-                    emptyMap()
+                    error("There is an issue with response body. Unable to serialise success or error from the dictionary")
                 }
+            } else {
+                return emptyMap()
             }
-
     }
 
     @Throws(Exception::class)
