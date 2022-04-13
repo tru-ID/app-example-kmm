@@ -31,14 +31,24 @@ kotlin {
         }
     }
     val serializationVersion = "1.3.2"
+    val ktorVersion = "2.0.0"
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
+
+                //Coroutines
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
 
+                // Ktor
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-cio:$ktorVersion")
+                implementation("io.ktor:ktor-client-logging:$ktorVersion")
+                implementation("io.ktor:ktor-client-serialization:$ktorVersion")
 
+                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                // Serialization
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
 
             }
         }
@@ -50,6 +60,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("id.tru.sdk:tru-sdk-android:0.3.2")
+                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
             }
         }
         val androidTest by getting
@@ -58,9 +69,13 @@ kotlin {
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
             dependsOn(commonMain)
+            dependencies {
+                implementation("io.ktor:ktor-client-darwin:$ktorVersion")
+            }
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+
         }
         val iosX64Test by getting
         val iosArm64Test by getting

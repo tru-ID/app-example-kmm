@@ -44,6 +44,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoVersion")
     implementation("org.jetbrains.kotlin:kotlin-serialization:$kotlinVersion")
+
     // Retrofit and relevant converters
     implementation("com.squareup.okhttp3:okhttp:4.9.2")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.0")
@@ -54,6 +55,7 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+
     // Kotlin
     implementation ("androidx.core:core-ktx:1.5.0")
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")

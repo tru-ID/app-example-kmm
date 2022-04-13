@@ -1,30 +1,30 @@
 package id.tru.kmm.phonecheckexample.android.model
 import android.content.Context
 import android.util.Log
-import id.tru.kmm.phonecheckexample.android.api.RetrofitBuilder
+import id.tru.kmm.phonecheckexample.APIService
 import id.tru.kmm.phonecheckexample.KReachabilityDetails
 import id.tru.kmm.phonecheckexample.KTraceInfo
-import id.tru.kmm.phonecheckexample.KmmTruSDK
 import id.tru.kmm.phonecheckexample.Platform
+import id.tru.kmm.phonecheckexample.PhoneCheckPost
+import id.tru.kmm.phonecheckexample.PhoneCheck
+import id.tru.kmm.phonecheckexample.PhoneCheckResult
 import java.io.IOException
-import java.net.URL
-import java.util.*
 
 /**
  * Class that handles phone check
  */
 class PhoneCheckDataSource(applicationContext: Context) {
     private val sdk = Platform(context = applicationContext)
+    private val apiService = APIService()
 
     // Step 1: Create a Phone Check
     @Throws(Exception::class)
     suspend fun createPhoneCheck(phone: String): Result<PhoneCheck> {
-        val response = RetrofitBuilder.apiClient.getPhoneCheck(PhoneCheckPost(phone))
-        return if (response.isSuccessful && response.body() != null) {
-            val phoneCheck = response.body() as PhoneCheck
+        val phoneCheck = apiService.getPhoneCheck(PhoneCheckPost(phone))
+        return if (phoneCheck != null) {
             Result.Success(phoneCheck)
         } else {
-            Result.Error(IOException("Error Occurred: ${response.message()}"))
+            Result.Error(IOException("Error Occurred: Response is not valid"))
         }
     }
 
@@ -38,9 +38,8 @@ class PhoneCheckDataSource(applicationContext: Context) {
     // Step 3: Get Phone Check Result
     @Throws(Exception::class)
     suspend fun retrievePhoneCheckResult(checkID: String): Result<PhoneCheckResult> {
-        val response = RetrofitBuilder.apiClient.getPhoneCheckResult(checkID)
-        return if(response.isSuccessful && response.body() != null) {
-            val phoneCheckResult = response.body() as PhoneCheckResult
+        val phoneCheckResult = apiService.getPhoneCheckResult(checkID)
+        return if(phoneCheckResult != null) {
             Result.Success(phoneCheckResult)
         } else {
             Result.Error(Exception("HTTP Error getting phone check results"))

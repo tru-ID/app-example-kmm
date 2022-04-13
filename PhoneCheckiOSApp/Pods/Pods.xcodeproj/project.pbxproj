@@ -21,32 +21,32 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		01EECA53BC65EEF0E8C413CFF712FEED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		07526A6D48C7909C4D10A70B6B98E7E3 /* ReachabilityDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D192F6063D84F1856CB15281F91A5E4 /* ReachabilityDetails.swift */; };
-		1AA4F70EE61FA932AA9B0D28E41D9189 /* TruSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B6213E17E2E46C2239D5D03296BB3 /* TruSDK.swift */; };
-		27F5D0237CDF6392380D94F1E0090273 /* TraceCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F2FEDFE6640569BBD40E2ED74625E7 /* TraceCollector.swift */; };
-		44B567B4228AC5B9BC5B89294062D32E /* Pods-PhoneCheckiOSApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCDEB7F5D161882F9BBDFDEB4363C13 /* Pods-PhoneCheckiOSApp-dummy.m */; };
-		6C9FCBFA067C0DE63C6EF1CBAEA84C49 /* CellularConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7EEAAD94F7B8CD024982A0BF8086D /* CellularConnectionManager.swift */; };
-		7F32D55BA7938C4CBFB3FE099F1ED025 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C46CA0E1B9C234B0FE647AAD7E6ED012 /* Pods-PhoneCheckiOSApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA09CF54983222825578F37D6A6078 /* Pods-PhoneCheckiOSApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D926E631AF55FB70EB8159CFB62AD74B /* playground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8CEC36727C2C19F10F1D50E432EEC /* playground-dummy.m */; };
-		F4C20483827246FAA5E2BA1A67D77D73 /* playground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 956AD6F7D7FFA798B007165CDA35FE80 /* playground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		022476128EDE0D8621CF3E3D9DDF3657 /* playground-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EF8CEC36727C2C19F10F1D50E432EEC /* playground-dummy.m */; };
+		40EBBFDF4E067F526B819D5EB53A66B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		47E85F1F5549E299672E462D1F268C92 /* ReachabilityDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D192F6063D84F1856CB15281F91A5E4 /* ReachabilityDetails.swift */; };
+		510003BBC6505DBB645BB84CD9108ABD /* TraceCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F2FEDFE6640569BBD40E2ED74625E7 /* TraceCollector.swift */; };
+		73BA7B57C50F68E957E90C10DA8A69CC /* Pods-PhoneCheckiOSApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EDCDEB7F5D161882F9BBDFDEB4363C13 /* Pods-PhoneCheckiOSApp-dummy.m */; };
+		7F94CE5A0F115611435BA8F7B3D26A67 /* Pods-PhoneCheckiOSApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22CA09CF54983222825578F37D6A6078 /* Pods-PhoneCheckiOSApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5B994C904A919C252633D76F17B8B68 /* playground-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 956AD6F7D7FFA798B007165CDA35FE80 /* playground-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB0F2CA12AD6E9BDAFE137B43F6875F6 /* TruSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B6213E17E2E46C2239D5D03296BB3 /* TruSDK.swift */; };
+		EC311E6435B0AE68611FAC9099E31D04 /* CellularConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7EEAAD94F7B8CD024982A0BF8086D /* CellularConnectionManager.swift */; };
+		FA4EE5C60C0FF563EA5FFAD758883FC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1F9D6ADA83836E18C11B36D2BFB8F40D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8777C9F6889E59EFFD631D80AEE9048B;
-			remoteInfo = shared;
-		};
-		B32B9A691E97C326CC9BE1EAE5CFAAA8 /* PBXContainerItemProxy */ = {
+		BD9946A1237CBC38BAF94ACAA9E5A46D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9864F7249988C7CB3135B8AF78D9DE06;
 			remoteInfo = playground;
+		};
+		E67773A11B1A9480FBCBA12361AEA432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8777C9F6889E59EFFD631D80AEE9048B;
+			remoteInfo = shared;
 		};
 		EACDB9D7E7DFA2BDA255FD48A8140636 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -59,11 +59,11 @@
 
 /* Begin PBXFileReference section */
 		00C64AEA9728186D910F9104D886D954 /* Pods-PhoneCheckiOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PhoneCheckiOSApp.release.xcconfig"; sourceTree = "<group>"; };
-		081B0714C689D246F9C2C048DEF32CEB /* Pods_PhoneCheckiOSApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PhoneCheckiOSApp.framework; path = "Pods-PhoneCheckiOSApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		081B0714C689D246F9C2C048DEF32CEB /* Pods-PhoneCheckiOSApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PhoneCheckiOSApp"; path = Pods_PhoneCheckiOSApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19885D533072385215B5F889E78009DE /* Pods-PhoneCheckiOSApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PhoneCheckiOSApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		22CA09CF54983222825578F37D6A6078 /* Pods-PhoneCheckiOSApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PhoneCheckiOSApp-umbrella.h"; sourceTree = "<group>"; };
 		2F0D77CCDA6C0731277DC50A5EEC5603 /* Pods-PhoneCheckiOSApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PhoneCheckiOSApp.modulemap"; sourceTree = "<group>"; };
-		304640F874D1FF807971A13B5EA95DB6 /* playground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = playground.framework; path = playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		304640F874D1FF807971A13B5EA95DB6 /* playground */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = playground; path = playground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		339E21088FE741888D60A004BB0657DA /* Pods-PhoneCheckiOSApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PhoneCheckiOSApp-frameworks.sh"; sourceTree = "<group>"; };
 		45D1BBB0BB6A8114EE2F135A0D270EE3 /* playground.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = playground.modulemap; sourceTree = "<group>"; };
 		55C2D3073305EAA08395825B4B1ECE48 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = build/cocoapods/framework/shared.framework; sourceTree = "<group>"; };
@@ -89,19 +89,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8D45E30D2DA1D96E352FB2671702BF47 /* Frameworks */ = {
+		0D5720CE4F859F37BC89FB89BA5542E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01EECA53BC65EEF0E8C413CFF712FEED /* Foundation.framework in Frameworks */,
+				40EBBFDF4E067F526B819D5EB53A66B5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1A12194CD6AF1E65E2CF23B2C1B0A81 /* Frameworks */ = {
+		B37E98C0007ADA99D18645217EC83AB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F32D55BA7938C4CBFB3FE099F1ED025 /* Foundation.framework in Frameworks */,
+				FA4EE5C60C0FF563EA5FFAD758883FC2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,15 +134,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		43EFE2A06C5E2DD123A9E90BEF9B7116 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				304640F874D1FF807971A13B5EA95DB6 /* playground.framework */,
-				081B0714C689D246F9C2C048DEF32CEB /* Pods_PhoneCheckiOSApp.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		4829524BF6CC9014B70AEADAD6B86C74 /* Pods-PhoneCheckiOSApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +149,15 @@
 			);
 			name = "Pods-PhoneCheckiOSApp";
 			path = "Target Support Files/Pods-PhoneCheckiOSApp";
+			sourceTree = "<group>";
+		};
+		5628655F10140702693C7E77B4BD83EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				304640F874D1FF807971A13B5EA95DB6 /* playground */,
+				081B0714C689D246F9C2C048DEF32CEB /* Pods-PhoneCheckiOSApp */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -223,7 +223,7 @@
 				313FE5FE915A4A924C55AAC02A910D61 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				34F9045E41F0051D2436DB90819CE0F7 /* Pods */,
-				43EFE2A06C5E2DD123A9E90BEF9B7116 /* Products */,
+				5628655F10140702693C7E77B4BD83EA /* Products */,
 				C0E83CDDBC3C63FFF9A82C5B3CEDDA3E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -254,19 +254,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A40018BBBFF3386BADA2B8867DDF9D8F /* Headers */ = {
+		7796FAEEA03BD7FD563057B40EAB0DED /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46CA0E1B9C234B0FE647AAD7E6ED012 /* Pods-PhoneCheckiOSApp-umbrella.h in Headers */,
+				C5B994C904A919C252633D76F17B8B68 /* playground-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E30AF298C7002297D2CB882FDF752B79 /* Headers */ = {
+		F2DD4D8AD46150DBE4C5CD760FA7AB41 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4C20483827246FAA5E2BA1A67D77D73 /* playground-umbrella.h in Headers */,
+				7F94CE5A0F115611435BA8F7B3D26A67 /* Pods-PhoneCheckiOSApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +275,12 @@
 /* Begin PBXNativeTarget section */
 		9864F7249988C7CB3135B8AF78D9DE06 /* playground */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F904955A65FB66A8603C8C8611F2244B /* Build configuration list for PBXNativeTarget "playground" */;
+			buildConfigurationList = CC309589E10F429AB31E1D7D569E54BB /* Build configuration list for PBXNativeTarget "playground" */;
 			buildPhases = (
-				E30AF298C7002297D2CB882FDF752B79 /* Headers */,
-				DE6CF55C2DAE535193CCE63DD9F69F97 /* Sources */,
-				B1A12194CD6AF1E65E2CF23B2C1B0A81 /* Frameworks */,
-				B43E91E39D60754929C505B576CF9BFB /* Resources */,
+				7796FAEEA03BD7FD563057B40EAB0DED /* Headers */,
+				01259751E60B7769F32270360C323C69 /* Sources */,
+				0D5720CE4F859F37BC89FB89BA5542E2 /* Frameworks */,
+				373E3DE958A0C5BCB2DEDD59BA1B722B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -288,27 +288,27 @@
 			);
 			name = playground;
 			productName = playground;
-			productReference = 304640F874D1FF807971A13B5EA95DB6 /* playground.framework */;
+			productReference = 304640F874D1FF807971A13B5EA95DB6 /* playground */;
 			productType = "com.apple.product-type.framework";
 		};
 		A3D29715AF5B6A624B38B2FDB0C88389 /* Pods-PhoneCheckiOSApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0DBEECAD3BC8EF1BDB6AEA25BE8D1D0D /* Build configuration list for PBXNativeTarget "Pods-PhoneCheckiOSApp" */;
+			buildConfigurationList = 245EDE8DFFBB9DAF65D870D6CC883335 /* Build configuration list for PBXNativeTarget "Pods-PhoneCheckiOSApp" */;
 			buildPhases = (
-				A40018BBBFF3386BADA2B8867DDF9D8F /* Headers */,
-				088C13EFEB8EF7410FB3A66800F11D62 /* Sources */,
-				8D45E30D2DA1D96E352FB2671702BF47 /* Frameworks */,
-				A847D5C00D486BC9973C43D73D64AC4A /* Resources */,
+				F2DD4D8AD46150DBE4C5CD760FA7AB41 /* Headers */,
+				F591D5D5CCB666D73AEF36E782C55CBA /* Sources */,
+				B37E98C0007ADA99D18645217EC83AB8 /* Frameworks */,
+				FDCBE40E8D000DF5F2F53A8114652AB9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				121ACF08F9824389DD57753C6CC7F941 /* PBXTargetDependency */,
-				E1B61CEFCC99B1C1A0E2BC5712887D08 /* PBXTargetDependency */,
+				B23D4311BFF96A061CFEA0E5BDC2D94A /* PBXTargetDependency */,
+				CB1CC6AD46270F1D8A18F751556AC940 /* PBXTargetDependency */,
 			);
 			name = "Pods-PhoneCheckiOSApp";
-			productName = "Pods-PhoneCheckiOSApp";
-			productReference = 081B0714C689D246F9C2C048DEF32CEB /* Pods_PhoneCheckiOSApp.framework */;
+			productName = Pods_PhoneCheckiOSApp;
+			productReference = 081B0714C689D246F9C2C048DEF32CEB /* Pods-PhoneCheckiOSApp */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -325,11 +325,11 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 43EFE2A06C5E2DD123A9E90BEF9B7116 /* Products */;
+			productRefGroup = 5628655F10140702693C7E77B4BD83EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -341,14 +341,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A847D5C00D486BC9973C43D73D64AC4A /* Resources */ = {
+		373E3DE958A0C5BCB2DEDD59BA1B722B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B43E91E39D60754929C505B576CF9BFB /* Resources */ = {
+		FDCBE40E8D000DF5F2F53A8114652AB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,53 +371,90 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		088C13EFEB8EF7410FB3A66800F11D62 /* Sources */ = {
+		01259751E60B7769F32270360C323C69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44B567B4228AC5B9BC5B89294062D32E /* Pods-PhoneCheckiOSApp-dummy.m in Sources */,
+				EC311E6435B0AE68611FAC9099E31D04 /* CellularConnectionManager.swift in Sources */,
+				022476128EDE0D8621CF3E3D9DDF3657 /* playground-dummy.m in Sources */,
+				47E85F1F5549E299672E462D1F268C92 /* ReachabilityDetails.swift in Sources */,
+				510003BBC6505DBB645BB84CD9108ABD /* TraceCollector.swift in Sources */,
+				CB0F2CA12AD6E9BDAFE137B43F6875F6 /* TruSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6CF55C2DAE535193CCE63DD9F69F97 /* Sources */ = {
+		F591D5D5CCB666D73AEF36E782C55CBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C9FCBFA067C0DE63C6EF1CBAEA84C49 /* CellularConnectionManager.swift in Sources */,
-				D926E631AF55FB70EB8159CFB62AD74B /* playground-dummy.m in Sources */,
-				07526A6D48C7909C4D10A70B6B98E7E3 /* ReachabilityDetails.swift in Sources */,
-				27F5D0237CDF6392380D94F1E0090273 /* TraceCollector.swift in Sources */,
-				1AA4F70EE61FA932AA9B0D28E41D9189 /* TruSDK.swift in Sources */,
+				73BA7B57C50F68E957E90C10DA8A69CC /* Pods-PhoneCheckiOSApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		121ACF08F9824389DD57753C6CC7F941 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = playground;
-			target = 9864F7249988C7CB3135B8AF78D9DE06 /* playground */;
-			targetProxy = B32B9A691E97C326CC9BE1EAE5CFAAA8 /* PBXContainerItemProxy */;
-		};
 		6409BFF030186B0C252F8228736A200D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = playground;
 			target = 9864F7249988C7CB3135B8AF78D9DE06 /* playground */;
 			targetProxy = EACDB9D7E7DFA2BDA255FD48A8140636 /* PBXContainerItemProxy */;
 		};
-		E1B61CEFCC99B1C1A0E2BC5712887D08 /* PBXTargetDependency */ = {
+		B23D4311BFF96A061CFEA0E5BDC2D94A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = playground;
+			target = 9864F7249988C7CB3135B8AF78D9DE06 /* playground */;
+			targetProxy = BD9946A1237CBC38BAF94ACAA9E5A46D /* PBXContainerItemProxy */;
+		};
+		CB1CC6AD46270F1D8A18F751556AC940 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = shared;
 			target = 8777C9F6889E59EFFD631D80AEE9048B /* shared */;
-			targetProxy = 1F9D6ADA83836E18C11B36D2BFB8F40D /* PBXContainerItemProxy */;
+			targetProxy = E67773A11B1A9480FBCBA12361AEA432 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		213EBACB30D6926081FB9976B8C28E8B /* Release */ = {
+		2129CC2900E3CD3A526259F20AEAE89D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F463486FAA7C3A8B9C64D151E68757A0 /* playground.release.xcconfig */;
+			baseConfigurationReference = 56D6482F2675013566164612501FDBD7 /* Pods-PhoneCheckiOSApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		226B5534AF12FCBCAB7883BF0A6DF176 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62E316765FE0B516867D41287701850 /* playground.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -444,11 +481,10 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		2B1A695D8081200D078BB4AAAF446F0D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -551,9 +587,9 @@
 			};
 			name = Release;
 		};
-		51E8B6D666CFCD4E329FAC70335E2E61 /* Debug */ = {
+		57CA9767B184DEB199D09CE3C7ABC856 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F62E316765FE0B516867D41287701850 /* playground.debug.xcconfig */;
+			baseConfigurationReference = F463486FAA7C3A8B9C64D151E68757A0 /* playground.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -580,10 +616,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -647,44 +684,7 @@
 			};
 			name = Release;
 		};
-		88F25BC4FFA6DF1A9080FC9BF80A9F87 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56D6482F2675013566164612501FDBD7 /* Pods-PhoneCheckiOSApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FB485A059D964E3732136D1522418300 /* Release */ = {
+		DEA12C7D945BEF0DFC0CBC70288EB3AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00C64AEA9728186D910F9104D886D954 /* Pods-PhoneCheckiOSApp.release.xcconfig */;
 			buildSettings = {
@@ -734,11 +734,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0DBEECAD3BC8EF1BDB6AEA25BE8D1D0D /* Build configuration list for PBXNativeTarget "Pods-PhoneCheckiOSApp" */ = {
+		245EDE8DFFBB9DAF65D870D6CC883335 /* Build configuration list for PBXNativeTarget "Pods-PhoneCheckiOSApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				88F25BC4FFA6DF1A9080FC9BF80A9F87 /* Debug */,
-				FB485A059D964E3732136D1522418300 /* Release */,
+				2129CC2900E3CD3A526259F20AEAE89D /* Debug */,
+				DEA12C7D945BEF0DFC0CBC70288EB3AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -752,11 +752,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F904955A65FB66A8603C8C8611F2244B /* Build configuration list for PBXNativeTarget "playground" */ = {
+		CC309589E10F429AB31E1D7D569E54BB /* Build configuration list for PBXNativeTarget "playground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51E8B6D666CFCD4E329FAC70335E2E61 /* Debug */,
-				213EBACB30D6926081FB9976B8C28E8B /* Release */,
+				226B5534AF12FCBCAB7883BF0A6DF176 /* Debug */,
+				57CA9767B184DEB199D09CE3C7ABC856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

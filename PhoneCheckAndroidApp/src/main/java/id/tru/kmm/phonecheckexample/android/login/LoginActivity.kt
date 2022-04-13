@@ -19,12 +19,8 @@ import androidx.lifecycle.ViewModelProvider
 import id.tru.kmm.phonecheckexample.android.R
 import id.tru.kmm.phonecheckexample.android.model.Step
 import id.tru.kmm.phonecheckexample.android.databinding.ActivityLoginBinding
-import id.tru.kmm.phonecheckexample.KmmTruSDK
 import id.tru.kmm.phonecheckexample.Platform
-import id.tru.kmm.phonecheckexample.android.MainActivity
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.Dispatchers
+
 /**
  * Add blazingly fast mobile phone verification to your app for 2FA or passwordless onboarding.
  * Leveraging the tru.ID PhoneCheck API confirms ownership of a mobile phone number by verifying
