@@ -19,7 +19,7 @@ android {
         versionCode = 1
         versionName = "1.0"
         // Consult the README on instructions for setting up SERVER_BASE_URL
-        buildConfigField("String", "SERVER_BASE_URL", "\"https://74b3-2a00-23c7-8589-8d01-2d6f-82cd-46df-5b07.ngrok.io\"")
+//        buildConfigField("String", "SERVER_BASE_URL", "\"https://016d-2a00-23c7-8589-8d01-39f4-a079-4a1-2daa.ngrok.io\"")
 //        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         
     }
