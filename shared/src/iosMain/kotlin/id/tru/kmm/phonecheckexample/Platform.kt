@@ -13,7 +13,8 @@ import kotlin.time.Duration
 //Shared iOSMain
 actual class Platform {
 
-    private val truSDK: TruSDK = TruSDK()
+//    private val truSDK: TruSDK = TruSDK()
+    private val truSDK: ObjcTruSDK = ObjcTruSDK()
 
     @Throws(Exception::class)
     actual final suspend fun checkUrlWithResponseBody(url: String): Map<Any?, Any?>? {

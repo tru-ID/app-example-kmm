@@ -28,6 +28,7 @@ class APIService {
 
     // POST /check
     // This method will supposedly seriliase to post body as well as deserialise the response to correct type
+//    @Throws(Exception::class)
     suspend fun getPhoneCheck(user: PhoneCheckPost): PhoneCheck? {//: Response<PhoneCheck>
         val response: HttpResponse = client.post("/check") {
             contentType(ContentType.Application.Json)
@@ -37,6 +38,7 @@ class APIService {
     }
 
     // GET /check_status, query value = "check_id"
+//    @Throws(Exception::class)
     suspend fun getPhoneCheckResult(checkId: String): PhoneCheckResult? {//: Response<PhoneCheckResult>
         val response: HttpResponse = client.get("/check_status") {
             contentType(ContentType.Application.Json)

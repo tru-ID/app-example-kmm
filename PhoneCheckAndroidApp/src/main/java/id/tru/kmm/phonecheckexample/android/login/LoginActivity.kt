@@ -137,9 +137,6 @@ class LoginActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "onResume: TruSDK is being initialised")
-
-//        TruSDK.initializeSdk(applicationContext)
-
     }
 
     private fun resetProgress() {

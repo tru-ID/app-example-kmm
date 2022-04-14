@@ -58,12 +58,6 @@ class PhoneCheckDataSource(applicationContext: Context) {
         return sdk.isReachable()
     }
 
-//    @Throws(Exception::class)
-//    fun getJSON(): String? {
-//        val baseURL = "https://tidy-crab-73.loca.lt/my-ip"
-////        val truSdk = TruSDK.getInstance()
-//        return truSdk.getJsonPropertyValue(baseURL, "ip_address")
-//    }
 
     companion object {
         private const val TAG = "PhoneCheckActivity"

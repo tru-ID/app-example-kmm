@@ -1,7 +1,7 @@
 PODS:
-  - playground (0.0.3)
+  - playground (0.0.4)
   - shared (1.0):
-    - playground (= 0.0.3)
+    - playground (= 0.0.4)
 
 DEPENDENCIES:
   - shared (from `../shared`)
@@ -15,8 +15,8 @@ EXTERNAL SOURCES:
     :path: "../shared"
 
 SPEC CHECKSUMS:
-  playground: fe042080cb196eb6abcc8f140d2c067d67608c2a
-  shared: de591747c9283c0f9c059ac46a4f1785267e3b72
+  playground: eb54e6b6b57f9a00ce50a58c0e92ff8e6eec4b2c
+  shared: 976ef69e01003f6546de6ae52ebbb0ba135fdbc3
 
 PODFILE CHECKSUM: 7372bd98fbf840acff845052f999e9f4fb700a9e
 

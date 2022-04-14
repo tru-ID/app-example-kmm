@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
 
     spec.ios.deployment_target = '12.0'
 
-    spec.dependency 'playground', '0.0.3'
+    spec.dependency 'playground', '0.0.4'
 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':shared',
