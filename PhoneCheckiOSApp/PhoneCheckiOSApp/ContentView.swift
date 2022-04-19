@@ -80,20 +80,22 @@ struct ContentView: View {
         var url = Bundle.main.object(forInfoDictionaryKey: "appServerUrl") as! String
         let apiService = APIService()//Potentially we get the URL from the App and can pass the URL here
         let phoneCheckPost = PhoneCheckPost(phone_number: phoneNumber)
-        
+        // Step 1: Send phone number to Server
         apiService.getPhoneCheck(user: phoneCheckPost) { phoneCheck, error in
             if let check = phoneCheck {
                 DispatchQueue.main.async {
                     self.check = check
                     let _ = print("1 - App: checkUrlWithResponseBody will be called")
+                    // Step 2: Open check_url over cellular
                     self.platform.checkUrlWithResponseBody(url: check.check_url) { body, error in
                         print("Last - App: checkUrlWithResponseBody:: Swift closure call with \(body) - \(error)")
+                        // Step 3: Get Result from Server
                         apiService.getPhoneCheckResult(checkId: check.check_id) { result, error in
                             DispatchQueue.main.async {
                                 //Rollback the UI state with the updated results.
                                 verifyButton.toggle()
                                 isLoading.toggle()
-                                
+
                                 if let error = error {
                                     endResult = resultFalse
                                     print("\u{274C} \(error)")
@@ -112,11 +114,11 @@ struct ContentView: View {
                         }
                     }
                 }
-            } else {
+            } else if let error = error {
                 DispatchQueue.main.async {
                     verifyButton.toggle()
                     isLoading.toggle()
-                    endResult = resultFalse + "error" + " \(error!)"
+                    endResult = resultFalse + "error" + " \(error)"
                     print("\u{274C} error \(String(describing: error))")
                 }
             }
