@@ -21,11 +21,11 @@ import io.ktor.serialization.kotlinx.json.*
 
 class APIService {
 
-    private val client = HttpClient(CIO){
+    private val client = HttpClient(){
 //        expectSuccess = true
-//        install(ContentNegotiation) {
-//            json()
-//        }
+        install(ContentNegotiation) {
+            json()
+        }
         defaultRequest {
             url(SERVER_BASE_URL)
         }
