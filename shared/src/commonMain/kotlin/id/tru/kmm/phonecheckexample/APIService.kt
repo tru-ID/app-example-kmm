@@ -9,35 +9,34 @@ import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
-import kotlinx.serialization.Serializable
+//import kotlinx.serialization.Serializable
 
-@Serializable
-data class Error(val code: Int, val message: String)
-class CustomResponseException(response: HttpResponse, cachedResponseText: String) :
-    ResponseException(response, cachedResponseText) {
-    override val message: String = "Custom server error: ${response.call.request.url}. " +
-            "Status: ${response.status}. Text: \"$cachedResponseText\""
-}
-
+//@Serializable
+//data class Error(val code: Int, val message: String)
+//class CustomResponseException(response: HttpResponse, cachedResponseText: String) :
+//    ResponseException(response, cachedResponseText) {
+//    override val message: String = "Custom server error: ${response.call.request.url}. " +
+//            "Status: ${response.status}. Text: \"$cachedResponseText\""
+//}
 
 class APIService {
 
     private val client = HttpClient(CIO){
-        expectSuccess = true
-        install(ContentNegotiation) {
-            json()
-        }
+//        expectSuccess = true
+//        install(ContentNegotiation) {
+//            json()
+//        }
         defaultRequest {
             url(SERVER_BASE_URL)
         }
-        HttpResponseValidator {
-            validateResponse { response ->
-                val error: Error = response.body()
-                if (error.hashCode() != 0) {
-                    throw CustomResponseException(response,"Code: ${error.code}, message: ${error.message}")
-                }
-            }
-        }
+//        HttpResponseValidator {
+//            validateResponse { response ->
+//                val error: Error = response.body()
+//                if (error.hashCode() != 0) {
+//                    throw CustomResponseException(response,"Code: ${error.code}, message: ${error.message}")
+//                }
+//            }
+//        }
     }
 
     //Temporary
@@ -53,7 +52,7 @@ class APIService {
                 setBody(user)
             }
         } catch (cause: ResponseException) {
-            println("cause: "+ cause)
+            println("cause: $cause")
             cause.response
         }
         return response.body()
@@ -69,7 +68,7 @@ class APIService {
                 parameter("check_id", checkId)
             }
         } catch (cause: ResponseException) {
-            println("cause: "+ cause)
+        println("cause: $cause")
             cause.response
         }
 
