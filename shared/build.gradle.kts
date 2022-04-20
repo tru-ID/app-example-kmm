@@ -60,7 +60,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation("id.tru.sdk:tru-sdk-android:0.3.2")
+                implementation("id.tru.sdk:tru-sdk-android:0.3.3")
                 implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
             }
         }

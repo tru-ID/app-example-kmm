@@ -1,14 +1,9 @@
 package id.tru.kmm.phonecheckexample
 import cocoapods.playground.*
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import kotlinx.coroutines.yield
 import platform.Foundation.NSError
 import platform.Foundation.NSURL
-import platform.darwin.NSInteger
-import kotlin.time.Duration
 
 //Shared iOSMain
 actual class Platform {
