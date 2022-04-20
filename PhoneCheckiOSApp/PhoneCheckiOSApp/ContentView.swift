@@ -8,8 +8,8 @@ struct ContentView: View {
     @State var termsAndConditionsSwitch: Bool = false
     @State var verifyButton: Bool = false
     @State var isLoading: Bool = false
-    @State var check: APIManager.Check?
-    @State var checkStatus: APIManager.CheckStatus?
+    @State var check: PhoneCheck?
+    @State var checkStatus: PhoneCheckResult?
     @State var endResult = ""
     var resultTrue = "\u{2705}"
     var resultFalse = "\u{274C}"
@@ -60,7 +60,6 @@ struct ContentView: View {
             .disabled(termsAndConditionsSwitch == false || phoneNumber.isEmpty || !phoneNumberTest.evaluate(with: phoneNumber))
             
             
-            
             if self.isLoading {
                 ProgressView("")
                     .progressViewStyle(CircularProgressViewStyle())
@@ -79,49 +78,58 @@ struct ContentView: View {
     
     func doPhoneCheck(phoneNumber: String) {
         var url = Bundle.main.object(forInfoDictionaryKey: "appServerUrl") as! String
-        var apiManager = APIManager(url: url)
-        apiManager.postCheck(withPhoneNumber: phoneNumber) { (result) in
-            switch result {
-            case .success(let c):
+        let apiService = APIService()//Potentially we get the URL from the App and can pass the URL here
+        let phoneCheckPost = PhoneCheckPost(phone_number: phoneNumber)
+        // Step 1: Send phone number to Server
+        apiService.getPhoneCheck(user: phoneCheckPost) { phoneCheck, error in
+            if let check = phoneCheck {
                 DispatchQueue.main.async {
-                    self.check = c // Should any state variable concerning UI be modified in Main Thread/Queue?
+                    self.check = check
                     let _ = print("1 - App: checkUrlWithResponseBody will be called")
-                    self.platform.checkUrlWithResponseBody(url: self.check!.url) { body, error in
+                    // Step 2: Open check_url over cellular
+                    self.platform.checkUrlWithResponseBody(url: check.check_url) { body, error in
                         print("Last - App: checkUrlWithResponseBody:: Swift closure call with \(body) - \(error)")
-                        apiManager.getCheckStatus(withCheckId: self.check!.id) { (s) in
+                        // Step 3: Get Result from Server
+                        apiService.getPhoneCheckResult(checkId: check.check_id) { result, error in
                             DispatchQueue.main.async {
                                 //Rollback the UI state with the updated results.
                                 verifyButton.toggle()
                                 isLoading.toggle()
-                                self.checkStatus = s
-                                if (s.match) {
-                                    endResult = resultTrue
-                                    print("\u{2705}")
-                                } else {
+
+                                if let error = error {
                                     endResult = resultFalse
-                                    print("\u{274C}")
+                                    print("\u{274C} \(error)")
+                                } else if let result = result {
+                                    self.checkStatus = result
+                                    if (result.match) {
+                                        endResult = resultTrue
+                                        print("\u{2705}")
+                                    } else {
+                                        endResult = resultFalse
+                                        print("\u{274C}")
+                                    }
                                 }
+                                
                             }
                         }
                     }
                 }
-            case .failure(let status):
+            } else if let error = error {
                 DispatchQueue.main.async {
                     verifyButton.toggle()
                     isLoading.toggle()
-                    if (status == APIManager.CheckError.badRequest) {
-                        endResult = resultFalse + "wrong format"
-                        print("\u{274C} wrong format")
-                    } else {
-                        endResult = resultFalse + "error"
-                        print("\u{274C} error")
-                    }
+                    endResult = resultFalse + "error" + " \(error)"
+                    print("\u{274C} error \(String(describing: error))")
                 }
-                
             }
-            
         }
-    }
+        
+//        let apiManager = APIManager(url: url)
+//        apiManager.postCheck(withPhoneNumber: phoneNumber) { (result) in
+//
+//            
+//        }//postCheck closure
+    }//doPhoneCheck
     
 }
 

@@ -21,8 +21,8 @@ kotlin {
         ios.deploymentTarget = "12.0"
 
         pod("playground") {
-            version = "0.0.3"
-            source = git ("https://gitlab.com/tru-id/playground.git") { tag = "0.0.3"}
+            version = "0.0.4"
+            source = git ("https://gitlab.com/tru-id/playground.git") { tag = "0.0.4"}
         }
         
         podfile = project.file("../PhoneCheckiOSApp/Podfile")
@@ -31,13 +31,26 @@ kotlin {
         }
     }
     val serializationVersion = "1.3.2"
+    val ktorVersion = "2.0.0"
     sourceSets {
         val commonMain by getting {
             dependencies {
+
+                //Coroutines
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+
+                // Ktor
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
+                implementation("io.ktor:ktor-client-cio:$ktorVersion")
+                implementation("io.ktor:ktor-client-logging:$ktorVersion")
+                implementation("io.ktor:ktor-client-serialization:$ktorVersion")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+
+                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                // Serialization
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:$serializationVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
-//                implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
+
             }
         }
         val commonTest by getting {
@@ -47,7 +60,8 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation("id.tru.sdk:tru-sdk-android:0.3.2")
+                implementation("id.tru.sdk:tru-sdk-android:0.3.3")
+                implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
             }
         }
         val androidTest by getting
@@ -56,9 +70,13 @@ kotlin {
         val iosSimulatorArm64Main by getting
         val iosMain by creating {
             dependsOn(commonMain)
+            dependencies {
+                implementation("io.ktor:ktor-client-darwin:$ktorVersion")
+            }
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             iosSimulatorArm64Main.dependsOn(this)
+
         }
         val iosX64Test by getting
         val iosArm64Test by getting

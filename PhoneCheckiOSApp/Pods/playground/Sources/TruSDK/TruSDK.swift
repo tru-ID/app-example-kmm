@@ -2,7 +2,7 @@ import Foundation
 import CoreTelephony
 @available(macOS 10.15, *)
 @available(iOS 12.0, *)
-@objc open class TruSDK: NSObject {
+open class TruSDK: NSObject {
     
     private let connectionManager: ConnectionManager
     private let operators: String?
@@ -26,27 +26,23 @@ import CoreTelephony
         self.init(connectionManager: CellularConnectionManager())
     }
 
-    /// This method perform a check request given a URL
+    /// This method performs a check request given a URL
     /// - Parameters:
     ///   - url: URL provided by tru.ID
     ///   - completion: closure to report check result. Note that, this closure will be called on the Main Thread.
-    @objc public func checkUrlWithResponseBody(url: URL, completion: @escaping (Error?, [String : Any]?) -> Void) {
+    public func checkUrlWithResponseBody(url: URL, completion: @escaping (Error?, [String : Any]?) -> Void) {
         connectionManager.check(url: url, operators: self.operators, completion: completion)
     }
 
-    /// This method perform a check request given a URL
+    /// This method performs a check request given a URL
     /// - Parameters:
     ///   - url: URL provided by tru.ID
     ///   - completion: closure to report check result and the trace information. Note that, this closure will be called on the Main Thread.
-    @objc public func checkWithTrace(url: URL, completion: @escaping (Error?, TraceInfo?) -> Void) {
+    public func checkWithTrace(url: URL, completion: @escaping (Error?, TraceInfo?) -> Void) {
         connectionManager.checkWithTrace(url: url, operators: self.operators, completion: completion)
     }
     
-    @objc public func testFunction(url: URL) {
-        print("test url: \(url)")
-    }
-    
-    /// This method perform a request to a TruId enpoint and reports back the details if the connection was made over
+    /// This method performs a request to a TruId enpoint and reports back the details if the connection was made over
     /// cellular.
     /// - Parameters:
     ///   - dataResidency: the data residency associated with your tru.ID project
@@ -66,36 +62,15 @@ import CoreTelephony
         }
     }
     
+    /// This method performs a request to a TruId enpoint and reports back the details if the connection was made over
+    /// cellular.
+    /// - Parameters:
+    ///   - completion: closure to report check result. Note that, this closure will be called on the Main Thread.
     public func isReachable(completion: @escaping (Result<ReachabilityDetails?, ReachabilityError>) -> Void) {
         isReachable(dataResidency: nil) { connectionResult in
             completion(connectionResult)
         }
     }
-    
-    // Objective-C compatible
-    @objc public func isReachable(dataResidency: String?, completion: @escaping (ReachabilityDetails?, ReachabilityError?) -> Void) {
-        connectionManager.isReachable(dataResidency: dataResidency, operators: self.operators) { connectionResult in
-            switch connectionResult {
-            case .failure(let reachabilityError): do {
-                if let error = reachabilityError {
-                    let err = ReachabilityError(type: error.type, title: error.title, status: -1, detail: error.detail)
-                    completion(nil, err)
-                } else {
-                    completion(nil, ReachabilityError(type: "Unknown", title: "No Error type", status: -1, detail: "Received an error with no known type"))
-                }
-            }
-            case .success(let reachabilityDetails): completion(reachabilityDetails, nil)
-            }
-        }
-    }
-    
-    // Objective-C compatible
-    @objc public func isReachable(completion: @escaping (ReachabilityDetails?, ReachabilityError?) -> Void) {
-        isReachable(dataResidency: nil) { connectionResult, error in
-            completion(connectionResult, error)
-        }
-    }
-
 
     @available(*, deprecated, renamed: "checkUrlWithResponseBody(url:completion:)")
     public func check(url: URL, completion: @escaping (Error?) -> Void) {

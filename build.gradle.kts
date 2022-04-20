@@ -3,6 +3,8 @@ buildscript {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven (url = "https://gitlab.com/api/v4/projects/22035475/packages/maven")
+        maven (url = "https://jitpack.io")
     }
     val kotlinVersion = "1.6.10"
     dependencies {
@@ -17,6 +19,7 @@ allprojects {
         google()
         mavenCentral()
         maven(url = "https://gitlab.com/api/v4/projects/22035475/packages/maven")
+        maven (url = "https://jitpack.io")
     }
 }
 
