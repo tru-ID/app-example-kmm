@@ -4,17 +4,23 @@
 
 ## Getting started
 
-Before you begin, you will need to :
-1. set up [an environment for Kotlin MultiPlatform] (https://kotlinlang.org/docs/multiplatform-mobile-setup.html):
-    * For iOS: Xcode 11.3+ required
+Before you begin, you will need:
+1. To set up [an environment for Kotlin MultiPlatform] (https://kotlinlang.org/docs/multiplatform-mobile-setup.html):
+    * For iOS: Xcode 11.3+ required, Cocoapods installed
     * For Android: Android Studio version 4.2 or 2020.3.1 Canary 8 or higher
     * Make sure that you have a compatible Kotlin plugin installed
     * Install the Kotlin Multiplatform Mobile plugin in Android Studio
     * Install Java
 2. A mobile phone with mobile data connection.
+3. To set up your environment for tru.ID PhoneCheck (https://developer.tru.id/docs/environment-setup)
+    * Create a tru.ID account
+    * Install tru.ID CLI
+    * Run your local tunnel solution
+    * Create a project
+    * Run the development server, pointing to the directory containing the newly created project configuration
 
 ## Installation
-
+This section is required if you want to use tru.ID Android and iOS SDKs within your own Kotlin MultiPlatform project.
 For Android:
 - Add the following to `repositories` in `buildscript` of the project `build.gradle.kts`
 
@@ -79,6 +85,14 @@ cocoapods {
 
 
 ## Run example
+- Open the phonecheck-kmm-example folder with Android Studio.
+- Update `SERVER_BASE_URL` within the APIService class of the commonMain Library at the shared module, to be the URL of your example server. Android Studio
+- Connect your phone to your computer so it's used for running the phonecheck-kmm-example app. 
+- Select either PhoneCheckAndroidApp or PhoneCheckiOSApp and Edit Configurations to further select your Execution target (i.e. your mobile phone)
+- Run the application from your IDE. For iOS, you can also open the PhoneCheckiOSApp with Xcode.
+- Enter the phone number for the mobile device in the UI in the format +{country_code}{number} e.g. +447900123456
+- Press the done keyboard key or touch the "Verify my phone number" button
+- You will see the result of the Phone Check
 
 ## Contributing
 
