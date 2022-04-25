@@ -1,6 +1,6 @@
 //
 //  ReachabilityDetails.swift
-//
+//  
 //
 //  Created by Murat Yakici on 02/06/2021.
 //
@@ -54,7 +54,7 @@ import Foundation
 }
 
 /// The TruID products available for the application developer on the celluar network the app is connected to.
-@objc public class Product: NSObject, Codable {
+@objc public class Product: NSObject, Codable{
     @objc public let productId: String
     @objc public let productName: String
     
@@ -105,5 +105,4 @@ import Foundation
         return result
     }
 }
-
 

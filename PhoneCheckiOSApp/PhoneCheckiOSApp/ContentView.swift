@@ -1,6 +1,6 @@
 import SwiftUI
 import shared
-import playground
+import tru_sdk_ios
 
 struct ContentView: View {
     @State var phoneNumber = ""
@@ -15,7 +15,7 @@ struct ContentView: View {
     var resultFalse = "\u{274C}"
     var phoneNumberTest = NSPredicate(format: "SELF MATCHES %@", "^[0-9+]{0,1}+[0-9]{5,16}$")
     
-    let platform = Platform()
+    let truSDK = ObjcTruSDK()
     
     var body: some View {
         VStack {
@@ -44,7 +44,7 @@ struct ContentView: View {
             .multilineTextAlignment(.center)
             
             Button ("Verify my phone number") {
-                let _ = self.platform.isReachable { reachabilityDetails, error in
+                let _ = self.truSDK.isReachable { reachabilityDetails, error in
                     print("Reachability Details \(reachabilityDetails) Reachability Error \(error)")
                     print("[isReachable] Done")
                 }
@@ -87,7 +87,7 @@ struct ContentView: View {
                     self.check = check
                     let _ = print("1 - App: checkUrlWithResponseBody will be called")
                     // Step 2: Open check_url over cellular
-                    self.platform.checkUrlWithResponseBody(url: check.check_url) { body, error in
+                    self.truSDK.checkUrlWithResponseBody(url: URL(string: check.check_url)!) { body, error in
                         print("Last - App: checkUrlWithResponseBody:: Swift closure call with \(body) - \(error)")
                         // Step 3: Get Result from Server
                         apiService.getPhoneCheckResult(checkId: check.check_id) { result, error in

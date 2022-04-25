@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-PhoneCheckiOSApp/Pods-PhoneCheckiOSApp-frameworks.sh
-${BUILT_PRODUCTS_DIR}/playground/playground.framework
+${BUILT_PRODUCTS_DIR}/tru-sdk-ios/tru_sdk_ios.framework

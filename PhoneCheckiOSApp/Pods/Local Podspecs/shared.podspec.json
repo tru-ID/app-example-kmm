@@ -16,8 +16,8 @@
     "ios": "12.0"
   },
   "dependencies": {
-    "playground": [
-      "0.0.4"
+    "tru-sdk-ios": [
+      "0.3.3"
     ]
   },
   "pod_target_xcconfig": {

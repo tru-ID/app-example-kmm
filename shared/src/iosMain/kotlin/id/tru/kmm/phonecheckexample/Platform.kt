@@ -1,5 +1,5 @@
 package id.tru.kmm.phonecheckexample
-import cocoapods.playground.*
+import cocoapods.tru_sdk_ios.*
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import platform.Foundation.NSError

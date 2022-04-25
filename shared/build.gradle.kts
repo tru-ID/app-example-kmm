@@ -20,9 +20,9 @@ kotlin {
         homepage = "Link to the Shared Module homepage"
         ios.deploymentTarget = "12.0"
 
-        pod("playground") {
-            version = "0.0.4"
-            source = git ("https://gitlab.com/tru-id/playground.git") { tag = "0.0.4"}
+        pod("tru-sdk-ios") {
+            version = "0.3.3"
+            source = git ("https://github.com/tru-ID/tru-sdk-ios") { tag = "0.3.3"}
         }
         
         podfile = project.file("../PhoneCheckiOSApp/Podfile")

@@ -2,7 +2,7 @@ import Foundation
 import CoreTelephony
 @available(macOS 10.15, *)
 @available(iOS 12.0, *)
-open class TruSDK: NSObject {
+open class TruSDK {
     
     private let connectionManager: ConnectionManager
     private let operators: String?
@@ -22,11 +22,11 @@ open class TruSDK: NSObject {
         self.operators = ops.joined(separator: ",")
     }
 
-    public override convenience init() {
+    public convenience init() {
         self.init(connectionManager: CellularConnectionManager())
     }
 
-    /// This method performs a check request given a URL
+    /// This method perform a check request given a URL
     /// - Parameters:
     ///   - url: URL provided by tru.ID
     ///   - completion: closure to report check result. Note that, this closure will be called on the Main Thread.
@@ -34,7 +34,7 @@ open class TruSDK: NSObject {
         connectionManager.check(url: url, operators: self.operators, completion: completion)
     }
 
-    /// This method performs a check request given a URL
+    /// This method perform a check request given a URL
     /// - Parameters:
     ///   - url: URL provided by tru.ID
     ///   - completion: closure to report check result and the trace information. Note that, this closure will be called on the Main Thread.
@@ -42,7 +42,8 @@ open class TruSDK: NSObject {
         connectionManager.checkWithTrace(url: url, operators: self.operators, completion: completion)
     }
     
-    /// This method performs a request to a TruId enpoint and reports back the details if the connection was made over
+    
+    /// This method perform a request to a TruId enpoint and reports back the details if the connection was made over
     /// cellular.
     /// - Parameters:
     ///   - dataResidency: the data residency associated with your tru.ID project
@@ -62,10 +63,6 @@ open class TruSDK: NSObject {
         }
     }
     
-    /// This method performs a request to a TruId enpoint and reports back the details if the connection was made over
-    /// cellular.
-    /// - Parameters:
-    ///   - completion: closure to report check result. Note that, this closure will be called on the Main Thread.
     public func isReachable(completion: @escaping (Result<ReachabilityDetails?, ReachabilityError>) -> Void) {
         isReachable(dataResidency: nil) { connectionResult in
             completion(connectionResult)
